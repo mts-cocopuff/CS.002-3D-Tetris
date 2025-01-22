@@ -324,6 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4429835841139923048}
+  - component: {fileID: 6668129918124488557}
   m_Layer: 0
   m_Name: JPiece
   m_TagString: Untagged
@@ -350,6 +351,19 @@ Transform:
   - {fileID: 8463381517446387222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6668129918124488557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017739831270379942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4988b5d3ffcd0444ba40e24768d7ce4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &9105883122775540595
 GameObject:
   m_ObjectHideFlags: 0

@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5819791468323619469, guid: 24fe7a2bb5ed34959a44f4561824f4a3, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -250,6 +254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8719804457870943873, guid: 5a177a31964ee4f6d8119e43bb05a699, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -298,10 +306,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &101890975
 MeshCollider:
@@ -418,6 +426,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 403563675}
     m_Modifications:
+    - target: {fileID: -8076960671068741631, guid: ca933da4982b5d54ca6c386257a78946, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     - target: {fileID: 271846739798891241, guid: ca933da4982b5d54ca6c386257a78946, type: 3}
       propertyPath: m_Name
       value: OPiece
@@ -485,6 +497,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 403563675}
     m_Modifications:
+    - target: {fileID: 252404620501210794, guid: c6f842c1f5dd34c359cfd814b29428d6, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     - target: {fileID: 271846739798891241, guid: c6f842c1f5dd34c359cfd814b29428d6, type: 3}
       propertyPath: m_Name
       value: SPiece
@@ -656,6 +672,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 403563675}
     m_Modifications:
+    - target: {fileID: -6870014009363474212, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     - target: {fileID: 4718644151602245690, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.56
@@ -860,6 +880,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6668129918124488557, guid: d289bfdda894445109b764c5246a2f3d, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     - target: {fileID: 8017739831270379942, guid: d289bfdda894445109b764c5246a2f3d, type: 3}
       propertyPath: m_Name
       value: JPiece
@@ -911,10 +935,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &1248690251
 MeshCollider:
@@ -965,10 +989,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &1328818806
 MeshCollider:
@@ -1019,10 +1043,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &1452848811
 MeshCollider:
@@ -1073,10 +1097,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &1725515458
 MeshCollider:
@@ -1108,6 +1132,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 403563675}
     m_Modifications:
+    - target: {fileID: -1283484286728637844, guid: 520e97c7ae5334c5f9dc51d7dd883c0b, type: 3}
+      propertyPath: cylinder
+      value: 
+      objectReference: {fileID: 1729756594}
     - target: {fileID: 7256187123548852996, guid: 520e97c7ae5334c5f9dc51d7dd883c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.29
@@ -1194,10 +1222,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &1728302771
 MeshCollider:
@@ -1234,6 +1262,7 @@ GameObject:
   - component: {fileID: 1729756597}
   - component: {fileID: 1729756600}
   - component: {fileID: 1729756601}
+  - component: {fileID: 1729756602}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: base
@@ -1329,10 +1358,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 94
+  m_CollisionDetection: 3
 --- !u!64 &1729756601
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1355,6 +1384,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1729756602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729756594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f443fd0d41354feea3d0660df0d3da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &2056318539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 271846739798891241, guid: c6f842c1f5dd34c359cfd814b29428d6, type: 3}
@@ -1382,10 +1424,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &2056318541
 MeshCollider:

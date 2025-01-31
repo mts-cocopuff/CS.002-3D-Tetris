@@ -6,14 +6,14 @@ using UnityEngine;
 public class Gravity : MonoBehaviour
 {
 
-    public GameObject cylinder;
+    public GameObject BaseObject;
     private bool isColliding = false;
     Turntable turntableScript;
 
 
     void Start()
     {
-        turntableScript = cylinder.GetComponent<Turntable>();
+        turntableScript = BaseObject.GetComponent<Turntable>();
     }
 
     void OnCollisionEnter(Collision collision){

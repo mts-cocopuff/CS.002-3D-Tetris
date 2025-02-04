@@ -7,7 +7,7 @@ public class OpenScene : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("XRSpawningpieces");
+        SceneManager.LoadScene("XRSpawningPieces");
     }
 
 }

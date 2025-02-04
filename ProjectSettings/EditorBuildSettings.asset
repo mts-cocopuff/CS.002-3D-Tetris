@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartXRMenu.unity
     guid: 9d1ae8fc4f73fe046b76efefe5c2b80f
   - enabled: 1
-    path: Assets/Scenes/XRSpawningpieces.unity
+    path: Assets/Scenes/XRSpawningPieces.unity
     guid: 52a6238d852a3bb498a9ed8b9dfb9517
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29dac93be997b46c7b760aa52ba96946, type: 2}

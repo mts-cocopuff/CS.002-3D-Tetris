@@ -131,8 +131,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 499522575445169896, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
+      propertyPath: m_Constraints
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 499522575445169896, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499522575445169896, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 995174097214735636, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -173,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 995174097214735636, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507944014391573598, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9041936761386810215, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_Name

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TetrisPiece : MonoBehaviour
 {
-    private Spawner spawner;
-    private Transform baseContainer;
+    private Spawner spawner = null;
+    private Transform baseContainer = null;
     private bool setPiece = false;
     private float despawnHeight = -5f;
     
@@ -27,7 +27,7 @@ public class TetrisPiece : MonoBehaviour
     {
         if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece"))
         {
-            if (setPiece == false){
+            if (!setPiece){
                 spawner.SpawnRandomPiece();
                 transform.SetParent(baseContainer, true);
                 setPiece = true;

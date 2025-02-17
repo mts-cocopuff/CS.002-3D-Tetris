@@ -19,6 +19,7 @@ public class Base : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetMouseButton(0)) {
             deltaRotation = Input.GetAxis("Mouse X") * -1000;
         } else {
@@ -27,5 +28,6 @@ public class Base : MonoBehaviour
         
         rotation += deltaRotation * Time.deltaTime;
         rotationBase.localRotation = Quaternion.Euler(0, rotation, 0);
+        */
     }
 }

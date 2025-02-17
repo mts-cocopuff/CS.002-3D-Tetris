@@ -23,6 +23,11 @@ public class Gravity : MonoBehaviour
     }
     public float speed;
 
+    public bool IsFalling()
+    {
+        return !isColliding;
+    }
+
     // Update is called once per frame
     void Update()
     {

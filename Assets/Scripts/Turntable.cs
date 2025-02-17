@@ -24,10 +24,10 @@ public class Turntable : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
         {
             deltaRotation = 500f;
-        }
+        } 
         
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        GetComponent<Rigidbody>().AddTorque(Vector3.up * deltaRotation * 0.05f, ForceMode.VelocityChange);
-        //GetComponent<Rigidbody>().MoveRotation(Quaternion.Euler(0, rotation, 0));
+        GetComponent<Rigidbody>().AddTorque(Vector3.up * deltaRotation * Time.deltaTime, ForceMode.VelocityChange);
+        //sGetComponent<Rigidbody>().MoveRotation(Quaternion.Euler(0, rotation, 0));
     }
 }

@@ -9,22 +9,25 @@ public class Turntable : MonoBehaviour
     private float targetSpeed = 0f;
     private float acceleration = 2f; // Adjust this value to control the smoothness
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
+
+        float deltaRotation = 0;
+        if (Input.GetMouseButton(0))
         {
-            targetSpeed = 1f;
+            deltaRotation = Input.GetAxis("Mouse X") * -1000;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            deltaRotation = -500f;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            targetSpeed = -1f;
+            deltaRotation = 500f;
         }
-        else
-        {
-            targetSpeed = 0f;
-        }
-
-        speed = Mathf.Lerp(speed, targetSpeed, acceleration * Time.deltaTime);
-        GetComponent<Rigidbody>().AddTorque(Vector3.up * speed, ForceMode.VelocityChange);
+        
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        GetComponent<Rigidbody>().AddTorque(Vector3.up * deltaRotation * 0.05f, ForceMode.VelocityChange);
+        //GetComponent<Rigidbody>().MoveRotation(Quaternion.Euler(0, rotation, 0));
     }
 }

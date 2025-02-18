@@ -54,4 +54,25 @@ public class RotateSnapSphere : MonoBehaviour
         if (angle > 180) angle -= 360;
         return angle;
     }
+    void Update()
+{
+    if (!isDragging)
+    {
+        RotateNonGravityObjects();
+    }
+}
+
+void RotateNonGravityObjects()
+{
+    GameObject[] nonGravityObjects = GameObject.FindGameObjectsWithTag("piece");
+
+    foreach (GameObject obj in nonGravityObjects)
+    {
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        if (rb != null && !rb.useGravity)
+        {
+            obj.transform.rotation = transform.rotation;
+        }
+    }
+}
 }

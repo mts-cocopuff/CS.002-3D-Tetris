@@ -7,7 +7,7 @@ public class Turntable : MonoBehaviour
     public float speed = 0f;
 
     private float targetSpeed = 0f;
-    private float acceleration = 2f; // Adjust this value to control the smoothness
+    private float acceleration = 0.5f; // Reduced value to reset speed slower
 
     void FixedUpdate()
     {

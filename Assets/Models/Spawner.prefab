@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 271846739798891241, guid: c6f842c1f5dd34c359cfd814b29428d6, type: 3}
   - {fileID: 7509909219926751710, guid: 520e97c7ae5334c5f9dc51d7dd883c0b, type: 3}
   - {fileID: 7936069262247418306, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
+  - {fileID: 1585483790439519461, guid: dac4ce58b5dd04ced8b0a0b48c014fee, type: 3}
   spawnPoint: {fileID: 4560926015524838225}
 --- !u!54 &2104990361881675248
 Rigidbody:

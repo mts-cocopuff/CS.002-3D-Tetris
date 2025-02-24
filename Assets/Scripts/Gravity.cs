@@ -2,25 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Gravity : MonoBehaviour
 {
-
     public GameObject BaseObject;
     private bool isColliding = false;
     Turntable turntableScript;
-
 
     void Start()
     {
         turntableScript = BaseObject.GetComponent<Turntable>();
     }
 
-    void OnCollisionEnter(Collision collision){
-        //set rigidbody usegravity
+    void OnCollisionEnter(Collision collision)
+    {
+        // Set rigidbody useGravity
         GetComponent<Rigidbody>().useGravity = true;
         isColliding = true;
     }
+
     public float speed;
 
     public bool IsFalling()
@@ -31,10 +30,10 @@ public class Gravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //while rigidbody is not colliding with anything, move down
+        // While rigidbody is not colliding with anything, move down
         if (!isColliding)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
 
             float nudgespeed = 6f;
             float inout = 0f;
@@ -56,7 +55,7 @@ public class Gravity : MonoBehaviour
             );
         }
         else{
-            
+
         }
     }
 }

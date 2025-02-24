@@ -10,4 +10,14 @@ public class OpenScene : MonoBehaviour
         SceneManager.LoadScene("XRSpawningPieces");
     }
 
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("StartXRMenu");
+    }
+
+    public void GoToOptions()
+    {
+        SceneManager.LoadScene("OptionsMenu");
+    }
+    
 }

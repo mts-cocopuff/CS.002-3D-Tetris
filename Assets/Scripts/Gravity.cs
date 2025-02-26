@@ -51,7 +51,7 @@ public class Gravity : MonoBehaviour
             
             transform.Translate(
                 Vector3.right * sideside * nudgespeed * Time.deltaTime
-                + Vector3.forward * inout * nudgespeed * Time.deltaTime
+                + Vector3.forward * inout * nudgespeed * Time.deltaTime, Space.World
             );
         }
         else{

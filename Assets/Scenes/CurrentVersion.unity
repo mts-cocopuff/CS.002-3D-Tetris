@@ -1087,6 +1087,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8890950703528254340, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
+      propertyPath: rotsphere
+      value: 
+      objectReference: {fileID: 1213269790}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

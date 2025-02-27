@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour
     private float timeSinceLastSpawn;
     private float lastSpawnTime = -1f;
 
+    public RotateSnapSphere rotsphere = null;
+
     private void Start()
     {
         SpawnRandomPiece();
@@ -31,5 +33,7 @@ public class Spawner : MonoBehaviour
         Instantiate(tetrisPieces[randomIndex], spawnPoint.position, Quaternion.identity);
 
         lastSpawnTime = Time.time;
+
+        rotsphere.ResetRotation();
     }
 }

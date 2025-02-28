@@ -11,9 +11,54 @@ public class Spawner : MonoBehaviour
 
     public RotateSnapSphere rotsphere = null;
 
+    public GameObject pieceTemplate;
+    public GameObject cubeTemplate;
+
+    private List<List<Vector3>> cubeCoordList;
+
     private void Start()
     {
+        cubeCoordList = new List<List<Vector3>>();
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(-2, 0, 0), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 1), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(1, 0, 1), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 1), new Vector3(-1, 0, 1), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 0), new Vector3(1, 0, 1)
+        });
+        CenterCubeCoords();
+
         SpawnRandomPiece();
+    }
+
+    void CenterCubeCoords()
+    {
+        foreach (List<Vector3> cubeCoords in cubeCoordList) 
+        {
+            Vector3 minV = Vector3.positiveInfinity;
+            Vector3 maxV = Vector3.negativeInfinity;
+
+            foreach (Vector3 v in cubeCoords)
+            {
+                minV = Vector3.Min(minV, v);
+                maxV = Vector3.Max(maxV, v);
+            }
+
+            Vector3 midV = ((minV + maxV) / 2.0f);
+
+            for (int i = 0; i < cubeCoords.Count; ++i)
+            {
+                cubeCoords[i] -= midV; 
+            }
+        }
     }
 
     public void SpawnRandomPiece()
@@ -27,12 +72,17 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        if (tetrisPieces.Length == 0) return;
+        GameObject newPiece = Instantiate(pieceTemplate, spawnPoint.position - new Vector3(0, 7, 0), Quaternion.identity);
+        newPiece.GetComponent<TetrisPiece>().spawner = this;
+        int randomIndex = Random.Range(0, cubeCoordList.Count);
+        randomIndex = 4;
+        List<Vector3> cubeCoords = cubeCoordList[randomIndex];
 
-        int randomIndex = Random.Range(0, tetrisPieces.Length);
-        Instantiate(tetrisPieces[randomIndex], spawnPoint.position, Quaternion.identity);
-
-        lastSpawnTime = Time.time;
+        foreach (Vector3 v in cubeCoords) 
+        {
+            GameObject newCube = Instantiate(cubeTemplate, newPiece.transform);
+            newCube.transform.localPosition = v;
+        }
 
         rotsphere.ResetRotation();
     }

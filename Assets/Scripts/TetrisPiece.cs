@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TetrisPiece : MonoBehaviour
 {
-    private Spawner spawner = null;
+    public Spawner spawner = null;
     private Transform baseContainer = null;
     private bool setPiece = false;
     private float despawnHeight = -5f;
     
     void Start()
     {
-        spawner = FindObjectOfType<Spawner>();
+        // spawner = FindObjectOfType<Spawner>();
         baseContainer = GameObject.Find("BaseContainer")?.transform;
     }
 

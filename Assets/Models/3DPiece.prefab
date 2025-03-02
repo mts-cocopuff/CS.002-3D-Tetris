@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: -1176932061905478340}
   - component: {fileID: -1316800899496396973}
   m_Layer: 0
-  m_Name: WeirdPiece
+  m_Name: 3DPiece
   m_TagString: piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

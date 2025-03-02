@@ -7,7 +7,7 @@ public class OpenScene : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("XRSpawningPieces");
+        SceneManager.LoadScene("XRinCurrentModel");
     }
 
     public void BackToMainMenu()

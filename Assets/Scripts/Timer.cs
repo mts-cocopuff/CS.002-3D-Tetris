@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class CountdownTimer : MonoBehaviour
         {
             timeRemaining = 0;
             timerText.text = "Time's Up!";
+
+            SceneManager.LoadScene("StartXRMenu");
         }
         if (timeRemaining < 60 && timeRemaining > 0)
         {

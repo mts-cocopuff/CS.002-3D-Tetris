@@ -9,7 +9,7 @@ public class Turntable : MonoBehaviour
     private float targetSpeed = 0f;
     private float acceleration = 0.5f; // Reduced value to reset speed slower
 
-    void FixedUpdate()
+    void Update()
     {
 
         float deltaRotation = 0;

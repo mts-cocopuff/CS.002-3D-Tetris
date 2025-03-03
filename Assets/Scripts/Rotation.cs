@@ -12,6 +12,7 @@ public class RotateSnapSphere : MonoBehaviour
 
     void OnMouseDrag()
     {
+        // if (!isDragging) return;
 
         Vector3 delta = Input.mousePosition - lastMousePosition;
         float rotationX = delta.y * rotationSpeed;
@@ -20,10 +21,13 @@ public class RotateSnapSphere : MonoBehaviour
         Bounds bounds = GetComponent<Collider>().bounds;
         Vector3 center = bounds.center;
 
-        transform.RotateAround(center, Vector3.up, rotationY);
-        transform.RotateAround(center, Vector3.right, rotationX);
-
         lastMousePosition = Input.mousePosition;
+    }
+
+    void OnMouseUp()
+    {
+        // SnapRotation();
+        isDragging = false;
     }
 
     void Update()
@@ -43,5 +47,10 @@ public class RotateSnapSphere : MonoBehaviour
                 obj.transform.rotation = transform.rotation;
             }
         }
+    }
+
+    public void ResetRotation()
+    {
+        transform.eulerAngles = new Vector3(0,0,0);
     }
 }

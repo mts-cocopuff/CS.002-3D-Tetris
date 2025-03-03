@@ -13,18 +13,18 @@ public class Turntable : MonoBehaviour
     {
 
         float deltaRotation = 0;
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             deltaRotation = Input.GetAxis("Mouse X") * -1000;
         }
-        /*else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.Q))
         {
             deltaRotation = -500f;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.E))
         {
             deltaRotation = 500f;
-        } */
+        }
         
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         GetComponent<Rigidbody>().AddTorque(Vector3.up * deltaRotation * Time.deltaTime, ForceMode.VelocityChange);

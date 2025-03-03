@@ -4,22 +4,25 @@ public class RotateSnapSphere : MonoBehaviour
 {
     public float rotationSpeed = 1f; // Reduced speed multiplier for smoother rotation
     private Vector3 lastMousePosition;
+    private bool isDragging = false;
 
     void OnMouseDown()
     {
         lastMousePosition = Input.mousePosition;
+        isDragging = true;
     }
 
     void OnMouseDrag()
     {
-        // if (!isDragging) return;
-
         Vector3 delta = Input.mousePosition - lastMousePosition;
         float rotationX = delta.y * rotationSpeed;
         float rotationY = -delta.x * rotationSpeed;
 
-        Bounds bounds = GetComponent<Collider>().bounds;
-        Vector3 center = bounds.center;
+        transform.Rotate(Vector3.up, rotationY, Space.World);
+        transform.Rotate(Vector3.right, rotationX, Space.World);
+
+        //Bounds bounds = GetComponent<Collider>().bounds;
+        //Vector3 center = bounds.center;
 
         lastMousePosition = Input.mousePosition;
     }
@@ -32,7 +35,7 @@ public class RotateSnapSphere : MonoBehaviour
 
     void Update()
     {
-            RotateNonGravityObjects();
+        RotateNonGravityObjects();
     }
 
     void RotateNonGravityObjects()

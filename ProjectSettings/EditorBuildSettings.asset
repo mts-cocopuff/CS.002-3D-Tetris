@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/PodiumSample.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/StartXRMenu.unity
     guid: 9d1ae8fc4f73fe046b76efefe5c2b80f
-  - enabled: 1
-    path: Assets/Scenes/XRSpawningpieces.unity
-    guid: 52a6238d852a3bb498a9ed8b9dfb9517
   - enabled: 1
     path: Assets/Scenes/OptionsMenu.unity
     guid: 7fead29f7b290cf40a1727b74fa16a62

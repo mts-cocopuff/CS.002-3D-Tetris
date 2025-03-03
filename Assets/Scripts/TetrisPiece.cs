@@ -20,12 +20,14 @@ public class TetrisPiece : MonoBehaviour
         if (transform.position.y < despawnHeight)
         {
             Destroy(gameObject);
+            if(!setPiece)
+                spawner.SpawnRandomPiece();
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece"))
+        if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece") || other.gameObject.CompareTag("wall"))
         {
             if (!setPiece){
                 spawner.SpawnRandomPiece();

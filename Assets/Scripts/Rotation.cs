@@ -14,7 +14,7 @@ public class RotateSnapSphere : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (!isDragging) return;
+        // if (!isDragging) return;
 
         Vector3 delta = Input.mousePosition - lastMousePosition;
         float rotationX = delta.y * rotationSpeed;
@@ -28,10 +28,11 @@ public class RotateSnapSphere : MonoBehaviour
 
     void OnMouseUp()
     {
+        // SnapRotation();
         isDragging = false;
-        SnapRotation();
     }
 
+    /*
     void SnapRotation()
     {
         Vector3 currentRotation = transform.eulerAngles;
@@ -54,25 +55,29 @@ public class RotateSnapSphere : MonoBehaviour
         if (angle > 180) angle -= 360;
         return angle;
     }
+    */
+
     void Update()
-{
-    if (!isDragging)
     {
         RotateNonGravityObjects();
     }
-}
 
-void RotateNonGravityObjects()
-{
-    GameObject[] nonGravityObjects = GameObject.FindGameObjectsWithTag("piece");
-
-    foreach (GameObject obj in nonGravityObjects)
+    void RotateNonGravityObjects()
     {
-        Rigidbody rb = obj.GetComponent<Rigidbody>();
-        if (rb != null && !rb.useGravity)
+        GameObject[] nonGravityObjects = GameObject.FindGameObjectsWithTag("piece");
+
+        foreach (GameObject obj in nonGravityObjects)
         {
-            obj.transform.rotation = transform.rotation;
+            Rigidbody rb = obj.GetComponent<Rigidbody>();
+            if (rb != null && !rb.useGravity)
+            {
+                obj.transform.rotation = transform.rotation;
+            }
         }
     }
-}
+
+    public void ResetRotation()
+    {
+        transform.eulerAngles = new Vector3(0,0,0);
+    }
 }

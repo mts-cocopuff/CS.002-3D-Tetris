@@ -14,14 +14,15 @@ public class RotateSnapSphere : MonoBehaviour
 
     void OnMouseDrag()
     {
-        // if (!isDragging) return;
-
         Vector3 delta = Input.mousePosition - lastMousePosition;
         float rotationX = delta.y * rotationSpeed;
         float rotationY = -delta.x * rotationSpeed;
 
         transform.Rotate(Vector3.up, rotationY, Space.World);
         transform.Rotate(Vector3.right, rotationX, Space.World);
+
+        //Bounds bounds = GetComponent<Collider>().bounds;
+        //Vector3 center = bounds.center;
 
         lastMousePosition = Input.mousePosition;
     }
@@ -31,31 +32,6 @@ public class RotateSnapSphere : MonoBehaviour
         // SnapRotation();
         isDragging = false;
     }
-
-    /*
-    void SnapRotation()
-    {
-        Vector3 currentRotation = transform.eulerAngles;
-
-        currentRotation.x = SnapAngle(currentRotation.x);
-        currentRotation.y = SnapAngle(currentRotation.y);
-        currentRotation.z = SnapAngle(currentRotation.z);
-
-        transform.eulerAngles = currentRotation;
-    }
-
-    float SnapAngle(float angle)
-    {
-        angle = NormalizeAngle(angle);
-        return Mathf.Round(angle / 90f) * 90f;
-    }
-
-    float NormalizeAngle(float angle)
-    {
-        if (angle > 180) angle -= 360;
-        return angle;
-    }
-    */
 
     void Update()
     {

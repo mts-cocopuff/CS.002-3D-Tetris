@@ -64,6 +64,7 @@ public class Spawner : MonoBehaviour
     public void SpawnRandomPiece()
     {
         timeSinceLastSpawn = Time.time - lastSpawnTime;
+        Debug.Log("Time since last spawn: " + timeSinceLastSpawn);
 
         if (timeSinceLastSpawn < 0.2f)
         {
@@ -72,10 +73,9 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        GameObject newPiece = Instantiate(pieceTemplate, spawnPoint.position - new Vector3(0, 7, 0), Quaternion.identity);
+        GameObject newPiece = Instantiate(pieceTemplate, spawnPoint.position - new Vector3(0, 3, 0), Quaternion.identity);
         newPiece.GetComponent<TetrisPiece>().spawner = this;
         int randomIndex = Random.Range(0, cubeCoordList.Count);
-        randomIndex = 4;
         List<Vector3> cubeCoords = cubeCoordList[randomIndex];
 
         foreach (Vector3 v in cubeCoords) 
@@ -84,6 +84,7 @@ public class Spawner : MonoBehaviour
             newCube.transform.localPosition = v;
         }
 
+        lastSpawnTime = Time.time;
         rotsphere.ResetRotation();
     }
 }

@@ -29,11 +29,27 @@ public class Spawner : MonoBehaviour
             new Vector3(1, 0, 1), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
         });
         cubeCoordList.Add(new List<Vector3>{
+            new Vector3(-1, 0, 1), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
             new Vector3(0, 0, 1), new Vector3(-1, 0, 1), new Vector3(0, 0, 0), new Vector3(1, 0, 0)
         });
         cubeCoordList.Add(new List<Vector3>{
             new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 0), new Vector3(1, 0, 1)
         });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 0), new Vector3(1, 0, 1)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 1), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(-1, 1, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 1), new Vector3(1, 0, 0), new Vector3(0, 0, 0), new Vector3(1, 1, 0)
+        });
+        cubeCoordList.Add(new List<Vector3>{
+            new Vector3(0, 0, 1), new Vector3(-1, 0, 0), new Vector3(0, 0, 0), new Vector3(0, 1, 0)
+        });
+
         CenterCubeCoords();
 
         SpawnRandomPiece();
@@ -64,6 +80,7 @@ public class Spawner : MonoBehaviour
     public void SpawnRandomPiece()
     {
         timeSinceLastSpawn = Time.time - lastSpawnTime;
+        Debug.Log("Time since last spawn: " + timeSinceLastSpawn);
 
         if (timeSinceLastSpawn < 0.2f)
         {
@@ -72,10 +89,9 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        GameObject newPiece = Instantiate(pieceTemplate, spawnPoint.position - new Vector3(0, 7, 0), Quaternion.identity);
+        GameObject newPiece = Instantiate(pieceTemplate, spawnPoint.position - new Vector3(0, 3, 0), Quaternion.identity);
         newPiece.GetComponent<TetrisPiece>().spawner = this;
         int randomIndex = Random.Range(0, cubeCoordList.Count);
-        randomIndex = 4;
         List<Vector3> cubeCoords = cubeCoordList[randomIndex];
 
         foreach (Vector3 v in cubeCoords) 
@@ -84,6 +100,7 @@ public class Spawner : MonoBehaviour
             newCube.transform.localPosition = v;
         }
 
+        lastSpawnTime = Time.time;
         rotsphere.ResetRotation();
     }
 }

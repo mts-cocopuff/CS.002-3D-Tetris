@@ -31,6 +31,7 @@ public class CountdownTimer : MonoBehaviour
             //get the tmp text and make it an int
             int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);
             PlayerPrefs.SetInt("tempscore", score);
+            PlayerPrefs.Save();
 
             SceneManager.LoadScene("EndScene");
         }

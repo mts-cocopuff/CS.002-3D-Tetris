@@ -14,6 +14,8 @@ public class TetrisPiece : MonoBehaviour
     [SerializeField] private Color outlineColor = Color.white;
     [SerializeField, Range(0f, 10f)] private float outlineWidth = 5f;
     
+    public static Material[] materials;
+
     void Start()
     {
         // spawner = FindObjectOfType<Spawner>();
@@ -27,12 +29,14 @@ public class TetrisPiece : MonoBehaviour
         if (transform.position.y < despawnHeight)
         {
             Destroy(gameObject);
+            if(!setPiece)
+                spawner.SpawnRandomPiece();
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece"))
+        if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece") || other.gameObject.CompareTag("wall"))
         {
             if (!setPiece){
                 spawner.SpawnRandomPiece();
@@ -40,6 +44,15 @@ public class TetrisPiece : MonoBehaviour
                 RemoveOutline();
                 setPiece = true;
             }
+        }
+    }
+
+    public void SetPieceMaterial(Material mat)
+    {
+        foreach (Transform child in transform)
+        {
+            var renderer = child.GetComponent<Renderer>();
+            renderer.material = mat;
         }
     }
 

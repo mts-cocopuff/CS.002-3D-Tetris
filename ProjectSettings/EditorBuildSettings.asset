@@ -12,11 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/OptionsMenu.unity
     guid: 7fead29f7b290cf40a1727b74fa16a62
   - enabled: 1
+    path: Assets/Scenes/EnterName.unity
+    guid: 5a402e408f3f84368906fe139d90f063
+  - enabled: 1
+    path: Assets/Scenes/CurrentVersion.unity
+    guid: 557b2abf5dbdf7246a045f343feb8570
+  - enabled: 1
     path: Assets/Scenes/XRinCurrentModel.unity
     guid: 7a5ccb65f96c4a84a852b2432c146ac8
   - enabled: 1
     path: Assets/Scenes/DifficultyButtons.unity
     guid: 1ce4d4937ae15984598855c2133e0849
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 3f73fac86ba6343029f8c0ccafb03aea
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29dac93be997b46c7b760aa52ba96946, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d3d7e696f6c594fb3bcdcce57e923cc7, type: 2}

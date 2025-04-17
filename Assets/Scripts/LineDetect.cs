@@ -7,18 +7,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LineDetect : MonoBehaviour
 {
     public Text debugText;
+
+    public GameObject pieceTemplate;
+    private Gravity gravityScript;
+    public TMP_Text scoreText;
     public int clearLimit;
     Vector3 center;
     Vector3 extends;
+
     // Start is called before the first frame update
     void Start()
     {
         center = new Vector3(0.0f, 1.0f, 0.0f);
         extends = new Vector3(15.0f, 0.5f, 15.0f);
+        scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+        gravityScript = pieceTemplate.GetComponent<Gravity>();
+        scoreText.text = "0";
     }
 
     // Update is called once per frame
@@ -37,7 +46,7 @@ public class LineDetect : MonoBehaviour
             if (name != "Cube")
                 continue;
 
-            Gravity grav = c.transform.parent.gameObject.GetComponent<Gravity>();
+             Gravity grav = c.transform.parent.gameObject.GetComponent<Gravity>();
             if (grav != null && grav.IsFalling())
                 continue;
 
@@ -47,6 +56,7 @@ public class LineDetect : MonoBehaviour
         if (cubes.Count >= clearLimit)
         {
             clearCubes(cubes);
+            scoreText.text = (int.Parse(scoreText.text) + ((clearLimit * 10) * gravityScript.speed)).ToString();
         }
     }
 

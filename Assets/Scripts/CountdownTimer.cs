@@ -28,7 +28,12 @@ public class CountdownTimer : MonoBehaviour
             timeRemaining = 0;
             timerText.text = "Time's Up!";
 
-            SceneManager.LoadScene("StartXRMenu");
+            //get the tmp text and make it an int
+            int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);
+            PlayerPrefs.SetInt("tempscore", score);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("EndScene");
         }
         if (timeRemaining < 60 && timeRemaining > 0)
         {

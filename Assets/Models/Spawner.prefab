@@ -55,7 +55,18 @@ MonoBehaviour:
   - {fileID: 7509909219926751710, guid: 520e97c7ae5334c5f9dc51d7dd883c0b, type: 3}
   - {fileID: 7936069262247418306, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
   - {fileID: 1585483790439519461, guid: dac4ce58b5dd04ced8b0a0b48c014fee, type: 3}
+  tetrisMaterials:
+  - {fileID: 2100000, guid: 5b4112a0382bb4619aea6a884fb903f7, type: 2}
+  - {fileID: 2100000, guid: e77bb2f72663242c992775c380722738, type: 2}
+  - {fileID: 2100000, guid: 1e17c84c74492436b9e9031a043aea49, type: 2}
+  - {fileID: 2100000, guid: c9e252760095c4c16ba1094794b65019, type: 2}
+  - {fileID: 2100000, guid: d452005b7833b4aa5a5a991b26b2d8e8, type: 2}
+  - {fileID: 2100000, guid: 4507d63ca7f724e829d0c5f93c8a11fc, type: 2}
+  - {fileID: 2100000, guid: e748f1fc625ef42a1a865e98855cd091, type: 2}
   spawnPoint: {fileID: 4560926015524838225}
+  rotsphere: {fileID: 0}
+  pieceTemplate: {fileID: 0}
+  cubeTemplate: {fileID: 0}
 --- !u!54 &2104990361881675248
 Rigidbody:
   m_ObjectHideFlags: 0

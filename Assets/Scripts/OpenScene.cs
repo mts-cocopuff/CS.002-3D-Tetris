@@ -9,11 +9,7 @@ using UnityEngine.SceneManagement;
 public class OpenScene : MonoBehaviour
 {
 
-    private Gravity gravityScript;
-
-    void Start(){
-        gravityScript = GameObject.Find("3DPiece").GetComponent<Gravity>();
-    }
+    public GameObject obj;
     
     public void NextScene()
     {
@@ -22,19 +18,19 @@ public class OpenScene : MonoBehaviour
 
     public void Easy()
     {
-        gravityScript.speed = 3f;
+        obj.GetComponent<Gravity>().speed = 3f;
         SceneManager.LoadScene("XRinCurrentModel");
     }
 
     public void Medium()
     {
-        gravityScript.speed = 5f;
+        obj.GetComponent<Gravity>().speed = 5f;
         SceneManager.LoadScene("XRinCurrentModel");
     }
 
     public void Hard()
     {
-        gravityScript.speed = 7f;
+        obj.GetComponent<Gravity>().speed = 7f;
         SceneManager.LoadScene("XRinCurrentModel");
     }
 

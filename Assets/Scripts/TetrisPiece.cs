@@ -9,6 +9,8 @@ public class TetrisPiece : MonoBehaviour
     private bool setPiece = false;
     private float despawnHeight = -5f;
     
+    public static Material[] materials;
+
     void Start()
     {
         // spawner = FindObjectOfType<Spawner>();
@@ -34,6 +36,15 @@ public class TetrisPiece : MonoBehaviour
                 transform.SetParent(baseContainer, true);
                 setPiece = true;
             }
+        }
+    }
+
+    public void SetPieceMaterial(Material mat)
+    {
+        foreach (Transform child in transform)
+        {
+            var renderer = child.GetComponent<Renderer>();
+            renderer.material = mat;
         }
     }
 }

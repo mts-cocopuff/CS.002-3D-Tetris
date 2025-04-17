@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] tetrisPieces;
+    public Material[] tetrisMaterials;
     public Transform spawnPoint;
     private float timeSinceLastSpawn;
     private float lastSpawnTime = -1f;
@@ -77,6 +78,12 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    Material RandomMaterial()
+    {
+        int randomIndex = Random.Range(0, tetrisMaterials.Length);
+        return tetrisMaterials[randomIndex];
+    }
+
     public void SpawnRandomPiece()
     {
         timeSinceLastSpawn = Time.time - lastSpawnTime;
@@ -99,6 +106,8 @@ public class Spawner : MonoBehaviour
             GameObject newCube = Instantiate(cubeTemplate, newPiece.transform);
             newCube.transform.localPosition = v;
         }
+
+        newPiece.GetComponent<TetrisPiece>().SetPieceMaterial(RandomMaterial());
 
         lastSpawnTime = Time.time;
         rotsphere.ResetRotation();

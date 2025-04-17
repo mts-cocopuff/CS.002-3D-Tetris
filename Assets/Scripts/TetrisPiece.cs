@@ -16,7 +16,8 @@ public class TetrisPiece : MonoBehaviour
     
     private static Material[] materials = {};
     public int color = 0;
-    private HashSet<GameObject> touching = new HashSet<GameObject>();
+    public bool rainbow = false;
+    private HashSet<TetrisPiece> touching = new HashSet<TetrisPiece>();
     
     void Awake()
     {
@@ -30,6 +31,7 @@ public class TetrisPiece : MonoBehaviour
                 Resources.Load<Material>("Materials/Purple"),
                 Resources.Load<Material>("Materials/Red"),
                 Resources.Load<Material>("Materials/Yellow"),
+                Resources.Load<Material>("Materials/Rainbow"),
             };
         }
     }
@@ -67,21 +69,56 @@ public class TetrisPiece : MonoBehaviour
         if (other.gameObject.CompareTag("piece"))
         {
             TetrisPiece otherpiece = other.gameObject.GetComponent<TetrisPiece>();
-            if (otherpiece.color == color)
-            {
-                touching.Add(other.gameObject);
+            TouchPiece(otherpiece);
+        }
+    }
 
-                // This method only works because pieces are deleted in groups of three
-                // Can be made more complex
-                if (touching.Count >= 2)
+    void TouchPiece(TetrisPiece otherpiece)
+    {
+        if (!(otherpiece.color == color || otherpiece.rainbow || rainbow))
+            return;
+        
+        touching.Add(otherpiece);
+
+        if (rainbow)
+        {
+            int[] colorCounts = new int[ColorCount()];
+            foreach (TetrisPiece tp in touching)
+            {
+                if (tp.rainbow)
                 {
-                    foreach (GameObject go in touching)
-                    {
-                        Destroy(go);
-                    }
-                    Destroy(gameObject);
+                    for (int i = 0; i < colorCounts.Length; ++i)
+                        colorCounts[i] += 1;
+                }
+                else
+                {
+                    colorCounts[tp.color] += 1;
                 }
             }
+
+            bool willDelete = false;
+            foreach (int num in colorCounts)
+            {
+                if (num >= 2)
+                {
+                    willDelete = true;
+                    break;
+                }
+            }
+
+            if (willDelete)
+            {
+                foreach (TetrisPiece tp in touching)
+                    if (tp.rainbow || colorCounts[tp.color] >= 2)
+                        Destroy(tp.gameObject);
+                Destroy(gameObject);
+            }
+        }
+        else if (touching.Count >= 2)
+        {
+            foreach (TetrisPiece tp in touching)
+                Destroy(tp.gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -89,26 +126,41 @@ public class TetrisPiece : MonoBehaviour
     {
         if (other.gameObject.CompareTag("piece"))
         {
-            touching.Remove(other.gameObject);
+            touching.Remove(other.gameObject.GetComponent<TetrisPiece>());
         }
     }
 
     public int ColorCount()
     {
-        return materials.Length;
+        return 7;
     }
 
-    public void SetPieceColor(int ind)
+    private void UpdateMaterial()
     {
-        if (ind >= ColorCount())
-            return;
-        
-        color = ind;
+        int ind = color % 7;
+        if (rainbow)
+            ind = 7;
+
         foreach (Transform child in transform)
         {
             var renderer = child.GetComponent<Renderer>();
             renderer.material = materials[ind];
         }
+    }
+
+    public void SetPieceColor(int ind)
+    {
+        color = ind;
+        
+        UpdateMaterial();
+    }
+
+    public void MakeRainbow()
+    {
+        color = 0;
+        rainbow = true;
+        
+        UpdateMaterial();
     }
 
     private void ApplyOutline()

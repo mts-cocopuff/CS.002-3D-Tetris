@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] tetrisPieces;
     public Transform spawnPoint;
     public float pieceScale = 1f;
+    public float rainbowChance = 0.25f;
     private float timeSinceLastSpawn;
     private float lastSpawnTime = -1f;
 
@@ -102,8 +103,16 @@ public class Spawner : MonoBehaviour
             newCube.transform.localPosition = v;
         }
 
-        int randomColor = Random.Range(0, newPieceComponent.ColorCount());
-        newPieceComponent.SetPieceColor(randomColor);
+        float rainbowRoll = Random.Range(0f, 1f);
+        if (rainbowRoll <= rainbowChance)
+        {
+            newPieceComponent.MakeRainbow();
+        }
+        else
+        {
+            int randomColor = Random.Range(0, newPieceComponent.ColorCount());
+            newPieceComponent.SetPieceColor(randomColor);
+        }
 
         newPiece.transform.localScale = new Vector3(pieceScale, pieceScale, pieceScale);
 

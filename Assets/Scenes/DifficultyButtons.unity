@@ -6094,7 +6094,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99373939}
         m_TargetAssemblyTypeName: OpenScene, Assembly-CSharp
-        m_MethodName: NextScene
+        m_MethodName: Easy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9045,7 +9045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99373939}
         m_TargetAssemblyTypeName: OpenScene, Assembly-CSharp
-        m_MethodName: NextScene
+        m_MethodName: Medium
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27127,7 +27127,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99373939}
         m_TargetAssemblyTypeName: OpenScene, Assembly-CSharp
-        m_MethodName: NextScene
+        m_MethodName: Hard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

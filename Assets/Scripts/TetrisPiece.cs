@@ -14,7 +14,25 @@ public class TetrisPiece : MonoBehaviour
     [SerializeField] private Color outlineColor = Color.white;
     [SerializeField, Range(0f, 10f)] private float outlineWidth = 5f;
     
-    public static Material[] materials;
+    private static Material[] materials = {};
+    public int color = 0;
+    private HashSet<GameObject> touching = new HashSet<GameObject>();
+    
+    void Awake()
+    {
+        if (materials.Length == 0)
+        {
+            materials = new Material[] {
+                Resources.Load<Material>("Materials/Blue"),
+                Resources.Load<Material>("Materials/Cyan"),
+                Resources.Load<Material>("Materials/Green"),
+                Resources.Load<Material>("Materials/Orange"),
+                Resources.Load<Material>("Materials/Purple"),
+                Resources.Load<Material>("Materials/Red"),
+                Resources.Load<Material>("Materials/Yellow"),
+            };
+        }
+    }
 
     void Start()
     {
@@ -45,14 +63,51 @@ public class TetrisPiece : MonoBehaviour
                 setPiece = true;
             }
         }
+
+        if (other.gameObject.CompareTag("piece"))
+        {
+            TetrisPiece otherpiece = other.gameObject.GetComponent<TetrisPiece>();
+            if (otherpiece.color == color)
+            {
+                touching.Add(other.gameObject);
+
+                // This method only works because pieces are deleted in groups of three
+                // Can be made more complex
+                if (touching.Count >= 2)
+                {
+                    foreach (GameObject go in touching)
+                    {
+                        Destroy(go);
+                    }
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 
-    public void SetPieceMaterial(Material mat)
+    void OnCollisionExit(Collision other)
     {
+        if (other.gameObject.CompareTag("piece"))
+        {
+            touching.Remove(other.gameObject);
+        }
+    }
+
+    public int ColorCount()
+    {
+        return materials.Length;
+    }
+
+    public void SetPieceColor(int ind)
+    {
+        if (ind >= ColorCount())
+            return;
+        
+        color = ind;
         foreach (Transform child in transform)
         {
             var renderer = child.GetComponent<Renderer>();
-            renderer.material = mat;
+            renderer.material = materials[ind];
         }
     }
 

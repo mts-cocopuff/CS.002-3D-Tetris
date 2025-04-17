@@ -230,7 +230,7 @@ MonoBehaviour:
   debugText: {fileID: 337298212}
   pieceTemplate: {fileID: 1585483790439519461, guid: 5ccc4cd6cb7ec2942880166d4e16c84f, type: 3}
   scoreText: {fileID: 1935038494}
-  clearLimit: 30
+  clearLimit: 999
 --- !u!4 &225676152
 Transform:
   m_ObjectHideFlags: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f63193e7ab054eeeac750cef02bbf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 25
+  timeRemaining: 240
   timerText: {fileID: 832171309}
 --- !u!114 &832171309
 MonoBehaviour:
@@ -1228,6 +1228,10 @@ PrefabInstance:
       propertyPath: rotsphere
       value: 
       objectReference: {fileID: 1213269790}
+    - target: {fileID: 8890950703528254340, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
+      propertyPath: pieceScale
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8890950703528254340, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
       propertyPath: cubeTemplate
       value: 

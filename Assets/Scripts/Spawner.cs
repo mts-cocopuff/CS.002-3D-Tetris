@@ -5,8 +5,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] tetrisPieces;
-    public Material[] tetrisMaterials;
     public Transform spawnPoint;
+    public float pieceScale = 1f;
     private float timeSinceLastSpawn;
     private float lastSpawnTime = -1f;
 
@@ -78,12 +78,6 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    Material RandomMaterial()
-    {
-        int randomIndex = Random.Range(0, tetrisMaterials.Length);
-        return tetrisMaterials[randomIndex];
-    }
-
     public void SpawnRandomPiece()
     {
         timeSinceLastSpawn = Time.time - lastSpawnTime;
@@ -97,7 +91,8 @@ public class Spawner : MonoBehaviour
         }
 
         GameObject newPiece = Instantiate(pieceTemplate, spawnPoint.position - new Vector3(0, 3, 0), Quaternion.identity);
-        newPiece.GetComponent<TetrisPiece>().spawner = this;
+        TetrisPiece newPieceComponent = newPiece.GetComponent<TetrisPiece>();
+        newPieceComponent.spawner = this;
         int randomIndex = Random.Range(0, cubeCoordList.Count);
         List<Vector3> cubeCoords = cubeCoordList[randomIndex];
 
@@ -107,7 +102,10 @@ public class Spawner : MonoBehaviour
             newCube.transform.localPosition = v;
         }
 
-        newPiece.GetComponent<TetrisPiece>().SetPieceMaterial(RandomMaterial());
+        int randomColor = Random.Range(0, newPieceComponent.ColorCount());
+        newPieceComponent.SetPieceColor(randomColor);
+
+        newPiece.transform.localScale = new Vector3(pieceScale, pieceScale, pieceScale);
 
         lastSpawnTime = Time.time;
         rotsphere.ResetRotation();

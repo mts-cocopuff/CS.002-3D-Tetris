@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using TMPro;
 
 public class Gravity : MonoBehaviour
 {
@@ -8,9 +11,13 @@ public class Gravity : MonoBehaviour
     private bool isColliding = false;
     Turntable turntableScript;
 
+    // private InputDevice LeftInputController;
+
     void Start()
     {
         turntableScript = BaseObject.GetComponent<Turntable>();
+                UnityEngine.XR.InputDevice leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+
     }
 
     void OnCollisionEnter(Collision collision)
@@ -38,6 +45,12 @@ public class Gravity : MonoBehaviour
             float nudgespeed = 6f;
             float inout = 0f;
             float sideside = 0f;
+
+            //      <---->
+            // inout = Axis2D.PrimaryThumbstick();
+            // sideside = Axis2D.PrimaryThumbstick();
+
+
 
             if (Input.GetKey(KeyCode.S))
                 inout = -1f;

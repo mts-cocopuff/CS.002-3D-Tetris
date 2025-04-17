@@ -8,6 +8,11 @@ public class TetrisPiece : MonoBehaviour
     private Transform baseContainer = null;
     private bool setPiece = false;
     private float despawnHeight = -5f;
+
+    private Outline outline = null;
+
+    [SerializeField] private Color outlineColor = Color.white;
+    [SerializeField, Range(0f, 10f)] private float outlineWidth = 5f;
     
     public static Material[] materials;
 
@@ -15,6 +20,8 @@ public class TetrisPiece : MonoBehaviour
     {
         // spawner = FindObjectOfType<Spawner>();
         baseContainer = GameObject.Find("BaseContainer")?.transform;
+
+        ApplyOutline();
     }
 
     private void Update()
@@ -34,6 +41,7 @@ public class TetrisPiece : MonoBehaviour
             if (!setPiece){
                 spawner.SpawnRandomPiece();
                 transform.SetParent(baseContainer, true);
+                RemoveOutline();
                 setPiece = true;
             }
         }
@@ -46,5 +54,19 @@ public class TetrisPiece : MonoBehaviour
             var renderer = child.GetComponent<Renderer>();
             renderer.material = mat;
         }
+    }
+
+    private void ApplyOutline()
+    {
+        outline = gameObject.AddComponent<Outline>();
+        outline.OutlineMode = Outline.Mode.OutlineAll;
+        outline.OutlineColor = outlineColor;
+        outline.OutlineWidth = outlineWidth;
+        outline.enabled = true;
+    }
+
+    private void RemoveOutline()
+    {
+        outline.enabled = false;
     }
 }

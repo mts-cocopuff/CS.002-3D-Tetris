@@ -3494,6 +3494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugText: {fileID: 337298212}
+  pieceTemplate: {fileID: 0}
+  scoreText: {fileID: 0}
   clearLimit: 10
 --- !u!4 &225676152
 Transform:
@@ -26430,6 +26432,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8890950703528254340, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
+      propertyPath: cubeTemplate
+      value: 
+      objectReference: {fileID: 2438289645812703608, guid: c5c7e5c5269ae6c48a40ea0077c8a958, type: 3}
+    - target: {fileID: 8890950703528254340, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
+      propertyPath: pieceTemplate
+      value: 
+      objectReference: {fileID: 1585483790439519461, guid: 5ccc4cd6cb7ec2942880166d4e16c84f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

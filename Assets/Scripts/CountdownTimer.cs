@@ -33,7 +33,7 @@ public class CountdownTimer : MonoBehaviour
             PlayerPrefs.SetInt("tempscore", score);
             PlayerPrefs.Save();
 
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("XREndScene");
         }
         if (timeRemaining < 60 && timeRemaining > 0)
         {

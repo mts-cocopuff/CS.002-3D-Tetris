@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Spawner : MonoBehaviour
     public GameObject cubeTemplate;
 
     private List<List<Vector3>> cubeCoordList;
+
+    public float spawnCooldown = 0.5f; // cooldown time in seconds
 
     private void Start()
     {
@@ -84,10 +87,20 @@ public class Spawner : MonoBehaviour
         timeSinceLastSpawn = Time.time - lastSpawnTime;
         Debug.Log("Time since last spawn: " + timeSinceLastSpawn);
 
+        // usinh a cooldown to prevent spawning too fast but it is reconmended we halt spawning until contact occurs
+        if(timeSinceLastSpawn < spawnCooldown)
+        {
+            //block spawning if cooldown is not met 
+            return;
+        }
+
         if (timeSinceLastSpawn < 0.2f)
         {
             Debug.Log("GAME OVER. PIECES TOP OUT");
             this.enabled = false;
+            // wait(10); // wait for 10 seconds before going to end scene
+            SceneManager.LoadScene("XREndScene"); // go to end scene if time runs out
+
             return;
         }
 

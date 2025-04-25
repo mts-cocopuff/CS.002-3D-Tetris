@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 995174097214735636, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.1000004
       objectReference: {fileID: 0}
     - target: {fileID: 995174097214735636, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3463,54 +3463,6 @@ Transform:
   - {fileID: 412628259}
   - {fileID: 494255936}
   m_Father: {fileID: 1556815770}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &225676150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 225676152}
-  - component: {fileID: 225676151}
-  m_Layer: 0
-  m_Name: LineDetect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &225676151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225676150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d572aeb3a6fe964b87759eb4f6b095f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugText: {fileID: 337298212}
-  pieceTemplate: {fileID: 0}
-  scoreText: {fileID: 0}
-  clearLimit: 10
---- !u!4 &225676152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225676150}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1800375, y: 0.48268414, z: 0.82323647}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227498415
 GameObject:
@@ -10820,7 +10772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f63193e7ab054eeeac750cef02bbf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 20
+  timeRemaining: 120
   timerText: {fileID: 832171309}
 --- !u!114 &832171309
 MonoBehaviour:
@@ -26491,7 +26443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4560926015524838225, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 12.9
       objectReference: {fileID: 0}
     - target: {fileID: 4560926015524838225, guid: 7a7e32c34d9abba43a0bdd666f285cc1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26545,7 +26497,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 4874576060194808473}
   - {fileID: 11460125}
-  - {fileID: 225676152}
   - {fileID: 2105315896}
   - {fileID: 1684065367}
   - {fileID: 1213269789}

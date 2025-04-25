@@ -16,6 +16,12 @@ public class CountdownTimer : MonoBehaviour
         totalTime = timeRemaining;
     }
 
+    public void GoToLeaderboard()
+    {
+        SceneManager.LoadScene("XREndScene");
+
+    }
+
     private void Update()
     {
         if (timeRemaining > 0)
@@ -29,11 +35,13 @@ public class CountdownTimer : MonoBehaviour
             timerText.text = "Time's Up!";
 
             //get the tmp text and make it an int
-            int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);
-            PlayerPrefs.SetInt("tempscore", score);
-            PlayerPrefs.Save();
+            // int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);
+            // PlayerPrefs.SetInt("tempscore", score);
+            // PlayerPrefs.Save();
 
-            SceneManager.LoadScene("XREndScene");
+            GoToLeaderboard();
+    
+
         }
         if (timeRemaining < 60 && timeRemaining > 0)
         {

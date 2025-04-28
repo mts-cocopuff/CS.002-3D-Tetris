@@ -9,6 +9,8 @@ public class TetrisPiece : MonoBehaviour
     private bool setPiece = false;
     private float despawnHeight = -5f;
 
+    public int fallenPieces = 0;
+
     private Outline outline = null;
 
     [SerializeField] private Color outlineColor = Color.white;
@@ -53,6 +55,7 @@ public class TetrisPiece : MonoBehaviour
                 spawner.SpawnRandomPiece();
             }
             Destroy(gameObject);
+            fallenPieces++;
         }
     }
 

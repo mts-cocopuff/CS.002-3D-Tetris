@@ -16,15 +16,16 @@ public class Gravity : MonoBehaviour
     void Start()
     {
         turntableScript = BaseObject.GetComponent<Turntable>();
-                UnityEngine.XR.InputDevice leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-
+        UnityEngine.XR.InputDevice leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        // Set rigidbody useGravity
-        GetComponent<Rigidbody>().useGravity = true;
-        isColliding = true;
+        if (collision.gameObject.CompareTag("base") || collision.gameObject.CompareTag("piece"))
+        {
+            GetComponent<Rigidbody>().useGravity = true;
+            isColliding = true;
+        }
     }
 
     public float speed;

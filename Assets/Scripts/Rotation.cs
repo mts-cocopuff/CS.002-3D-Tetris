@@ -45,7 +45,7 @@ public class RotateSnapSphere : MonoBehaviour
         foreach (GameObject obj in nonGravityObjects)
         {
             Rigidbody rb = obj.GetComponent<Rigidbody>();
-            if (rb != null && !rb.useGravity)
+            if (rb != null && rb.isKinematic == false)
             {
                 obj.transform.rotation = transform.rotation;
             }

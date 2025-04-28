@@ -65,10 +65,6 @@ public class TetrisPiece : MonoBehaviour
                 spawner.SpawnRandomPiece();
                 transform.SetParent(baseContainer, true);
                 RemoveOutline();
-
-                Rigidbody rb = GetComponent<Rigidbody>();
-                if (rb != null)
-                    rb.isKinematic = true;
             }
         }
 

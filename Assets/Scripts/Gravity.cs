@@ -47,11 +47,13 @@ public class Gravity : MonoBehaviour
             float sideside = 0f;
 
             //      <---->
-            // inout = Axis2D.PrimaryThumbstick();
-            // sideside = Axis2D.PrimaryThumbstick();
-
-
-
+            //Get the x y axis positions of the right hand  (secondary) controller thumbstick
+            Vector2 axis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
+            // inputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+            
+            inout = axis.y;  // forward/backward movement
+            sideside = axis.x; // left/right movement
+          
             if (Input.GetKey(KeyCode.S))
                 inout = -1f;
             else if (Input.GetKey(KeyCode.W))

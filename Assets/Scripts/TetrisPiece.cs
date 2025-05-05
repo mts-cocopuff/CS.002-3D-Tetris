@@ -9,6 +9,8 @@ public class TetrisPiece : MonoBehaviour
     private bool setPiece = false;
     private float despawnHeight = -5f;
 
+    public int fallenPieces = 0;
+
     private Outline outline = null;
 
     [SerializeField] private Color outlineColor = Color.white;
@@ -48,21 +50,24 @@ public class TetrisPiece : MonoBehaviour
     {
         if (transform.position.y < despawnHeight)
         {
-            Destroy(gameObject);
-            if(!setPiece)
+            if(!setPiece) {
+                setPiece = true;
                 spawner.SpawnRandomPiece();
+            }
+            Destroy(gameObject);
+            fallenPieces++;
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece") || other.gameObject.CompareTag("wall"))
+        if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece"))
         {
             if (!setPiece){
+                setPiece = true;
                 spawner.SpawnRandomPiece();
                 transform.SetParent(baseContainer, true);
                 RemoveOutline();
-                setPiece = true;
             }
         }
 

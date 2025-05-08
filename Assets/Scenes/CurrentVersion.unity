@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4374798494044075647, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
+      propertyPath: wallHeight
+      value: 
+      objectReference: {fileID: 31358736}
     - target: {fileID: 8507944014391573598, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -198,6 +202,11 @@ PrefabInstance:
       addedObject: {fileID: 375479810}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5242e2930c2c61241b9793788ba908df, type: 3}
+--- !u!1 &31358736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1585483790439519461, guid: 6467c7c0c318491499a183f6ebbc8fe4, type: 3}
+  m_PrefabInstance: {fileID: 375479809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &225676150
 GameObject:
   m_ObjectHideFlags: 0

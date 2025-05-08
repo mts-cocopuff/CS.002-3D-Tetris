@@ -19,18 +19,21 @@ public class OpenScene : MonoBehaviour
     public void Easy()
     {
         obj.GetComponent<Gravity>().speed = 3f;
+        PlayerPrefs.SetInt("speed", 3);
         SceneManager.LoadScene("XRinCurrentModel");
     }
 
     public void Medium()
     {
         obj.GetComponent<Gravity>().speed = 5f;
+        PlayerPrefs.SetInt("speed", 5);
         SceneManager.LoadScene("XRinCurrentModel");
     }
 
     public void Hard()
     {
         obj.GetComponent<Gravity>().speed = 7f;
+        PlayerPrefs.SetInt("speed", 7);
         SceneManager.LoadScene("XRinCurrentModel");
     }
 

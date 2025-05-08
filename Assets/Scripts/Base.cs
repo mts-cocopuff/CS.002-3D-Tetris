@@ -5,7 +5,7 @@ using UnityEngine;
 public class Base : MonoBehaviour
 {
     [SerializeField]
-	Transform rotationBase;
+    GameObject wallHeight;
     float rotation;
     float deltaRotation;
     
@@ -14,6 +14,16 @@ public class Base : MonoBehaviour
     {
         rotation = 0.0f;
         deltaRotation = 5.0f;
+
+        int speed = PlayerPrefs.GetInt("speed", 3);
+
+        if(speed == 5){
+            wallHeight.transform.localScale = new Vector3(0.06666667f, 1, 0.06666667f);
+        }
+        else if(speed == 7){
+            //disable wallHeight
+            wallHeight.SetActive(false);
+        }
     }
 
     // Update is called once per frame

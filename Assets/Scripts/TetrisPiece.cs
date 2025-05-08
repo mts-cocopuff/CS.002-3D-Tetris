@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TetrisPiece : MonoBehaviour
 {
     public Spawner spawner = null;
+
+    public TMP_Text scoreText;
+    private int speed;
     private Transform baseContainer = null;
     private bool setPiece = false;
     private float despawnHeight = -5f;
@@ -42,6 +46,8 @@ public class TetrisPiece : MonoBehaviour
     {
         // spawner = FindObjectOfType<Spawner>();
         baseContainer = GameObject.Find("BaseContainer")?.transform;
+        scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+        speed = PlayerPrefs.GetInt("speed", 3);
 
         ApplyOutline();
     }
@@ -117,6 +123,8 @@ public class TetrisPiece : MonoBehaviour
                     if (tp.rainbow || colorCounts[tp.color] >= 2)
                         Destroy(tp.gameObject);
                 Destroy(gameObject);
+                
+                scoreText.text = (int.Parse(scoreText.text) + (50 * speed)).ToString();
             }
         }
         else if (touching.Count >= 2)
@@ -124,6 +132,8 @@ public class TetrisPiece : MonoBehaviour
             foreach (TetrisPiece tp in touching)
                 Destroy(tp.gameObject);
             Destroy(gameObject);
+            
+            scoreText.text = (int.Parse(scoreText.text) + (75 * speed)).ToString();
         }
     }
 

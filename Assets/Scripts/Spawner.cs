@@ -84,6 +84,8 @@ public class Spawner : MonoBehaviour
 
     public void SpawnRandomPiece()
     {
+        Debug.Log("Spawning new piece");
+
         timeSinceLastSpawn = Time.time - lastSpawnTime;
         Debug.Log("Time since last spawn: " + timeSinceLastSpawn);
 

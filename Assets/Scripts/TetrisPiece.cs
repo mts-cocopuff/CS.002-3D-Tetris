@@ -51,6 +51,7 @@ public class TetrisPiece : MonoBehaviour
         if (transform.position.y < despawnHeight)
         {
             if(!setPiece) {
+                Debug.Log("The piece has fallen off the map");
                 setPiece = true;
                 spawner.SpawnRandomPiece();
             }
@@ -61,14 +62,22 @@ public class TetrisPiece : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if(setPiece){
+            return;
+        }
+
         if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece"))
         {
+
+
             if (!setPiece){
+                Debug.Log("The piece has landed");
                 setPiece = true;
                 spawner.SpawnRandomPiece();
                 transform.SetParent(baseContainer, true);
                 RemoveOutline();
             }
+            
         }
 
         if (other.gameObject.CompareTag("piece"))

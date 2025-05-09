@@ -35,9 +35,9 @@ public class CountdownTimer : MonoBehaviour
             timerText.text = "Time's Up!";
 
             //get the tmp text and make it an int
-            // int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);
-            // PlayerPrefs.SetInt("tempscore", score);
-            // PlayerPrefs.Save();
+            int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);
+            PlayerPrefs.SetInt("tempscore", score);
+            PlayerPrefs.Save();
 
             GoToLeaderboard();
     

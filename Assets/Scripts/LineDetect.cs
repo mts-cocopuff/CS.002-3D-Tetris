@@ -56,7 +56,6 @@ public class LineDetect : MonoBehaviour
         if (cubes.Count >= clearLimit)
         {
             clearCubes(cubes);
-            scoreText.text = (int.Parse(scoreText.text) + ((clearLimit * 10) * gravityScript.speed)).ToString();
         }
     }
 

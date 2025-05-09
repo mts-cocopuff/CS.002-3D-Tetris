@@ -156,6 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b14badc2869c343b75926f8fffe38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  color: 0
+  rainbow: 0
 --- !u!114 &8719804457870943873
 MonoBehaviour:
   m_ObjectHideFlags: 0

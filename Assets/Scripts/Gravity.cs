@@ -69,6 +69,13 @@ public class Gravity : MonoBehaviour
                 Vector3.right * sideside * nudgespeed * Time.deltaTime
                 + Vector3.forward * inout * nudgespeed * Time.deltaTime, Space.World
             );
+
+            UnityEngine.XR.InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+            if (rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceRotation, out Quaternion controllerRotation))
+            {
+                transform.rotation = controllerRotation* Quaternion.Euler(30, 30, 30);
+            }
+
         }
         else{
 

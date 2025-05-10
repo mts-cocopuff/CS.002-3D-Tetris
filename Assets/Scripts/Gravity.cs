@@ -21,7 +21,6 @@ public class Gravity : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.CompareTag("base") || collision.gameObject.CompareTag("piece"))
         {
             GetComponent<Rigidbody>().useGravity = true;

@@ -8,7 +8,6 @@ TagManager:
   - base
   - spawner
   - wall
-  - baseobject
   layers:
   - Default
   - TransparentFX

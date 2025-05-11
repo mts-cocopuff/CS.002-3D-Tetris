@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using TMPro;
 
 public class RotateSnapSphere : MonoBehaviour
 {
@@ -35,6 +38,17 @@ public class RotateSnapSphere : MonoBehaviour
 
     void Update()
     {
+        UnityEngine.XR.InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+
+        if (rightController != null)
+        {
+            if (rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceRotation, out Quaternion controllerRotation))
+            {
+                Vector3 controllerEuler = controllerRotation.eulerAngles;
+                transform.rotation = Quaternion.Euler(controllerEuler);
+            }
+        }
+
         RotateNonGravityObjects();
     }
 

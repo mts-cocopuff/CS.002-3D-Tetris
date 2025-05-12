@@ -24,6 +24,7 @@ public class TetrisPiece : MonoBehaviour
     public int color = 0;
     public bool rainbow = false;
     private HashSet<TetrisPiece> touching = new HashSet<TetrisPiece>();
+    private bool hasScored = false;
     
     void Awake()
     {
@@ -124,7 +125,11 @@ public class TetrisPiece : MonoBehaviour
                         Destroy(tp.gameObject);
                 Destroy(gameObject);
                 
-                scoreText.text = (int.Parse(scoreText.text) + (50 * speed)).ToString();
+                if (!hasScored)
+                {
+                    hasScored = true;
+                    scoreText.text = (int.Parse(scoreText.text) + (50 * speed)).ToString();
+                }
             }
         }
         else if (touching.Count >= 2)
@@ -132,8 +137,11 @@ public class TetrisPiece : MonoBehaviour
             foreach (TetrisPiece tp in touching)
                 Destroy(tp.gameObject);
             Destroy(gameObject);
-            
-            scoreText.text = (int.Parse(scoreText.text) + (75 * speed)).ToString();
+            if (!hasScored)
+            {
+                hasScored = true;
+                scoreText.text = (int.Parse(scoreText.text) + (75 * speed)).ToString();
+            }
         }
     }
 

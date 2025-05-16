@@ -53,7 +53,7 @@ public class Turntable : MonoBehaviour
                 // Convert rotation to Euler angles to make it easier to work with
                 Vector3 controllerEuler = controllerRotation.eulerAngles;
 
-                float changeRot = prevConRot - controllerEuler.y;
+                float changeRot = controllerEuler.y - prevConRot;
 
                 GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 GetComponent<Rigidbody>().AddTorque(Vector3.up * changeRot, ForceMode.VelocityChange);

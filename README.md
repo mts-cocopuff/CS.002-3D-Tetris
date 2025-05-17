@@ -76,3 +76,10 @@
 <li>Piece rotation and movement tracked with other controller</li>
 <li>Scoring mechanic based on color matching</li>
 <li>High score leaderboard to compete against others!</li>
+
+<h2>🔌 Implementation</h2>
+<li>Unity version 2022.3.52f1</li>
+<li>Uses Meta Quest 3 and OpenXR plugin</li>
+<li>Synchronizes rotation of controller and rotation of game board</li>
+<li>Has to sync up controller movements with Unity physics</li>
+

@@ -2,9 +2,9 @@
 <h1>
   3D Tetris Shuffle
 </h1>
+  
 <h3 align="center">
   2024-2025 Senior Capstone project at Oregon State University
-
 </h3>
   
 <img width="866" alt="Screenshot 2025-05-16 at 5 18 23 PM" src="https://github.com/user-attachments/assets/325aa74f-9bae-43c4-94b2-020f80a33602" />
@@ -33,10 +33,12 @@
   </ol>
 </details>
 
+
+
 <h1>❓ About</h1>
 
 <h2>⬇️Download and Install⬇️</h2>
-<p>In order to install this application there are a few requirements you need such as a Meta Quest 3, Access to a device that you can connect to the quest 3 using a cord, </p>
+<p>In order to install this application there are a few requirements you need, such as a Meta Quest 3, access to a device that can connect to the Quest 3 using a cord, </p>
 
 [⬇️ Download APK File](https://github.com/mts-cocopuff/CS.002-3D-Tetris/tree/main/BuiltAPKversions/TetrisShuffle1.0.apk)
 
@@ -45,19 +47,16 @@
 <ul>
   <li>Meta Quest 3 Headset</li>
   <ul>
-    <li>The headset that you use must be set to developer mode, to learn how to do that click the link below</li>
+    <li>The headset that you use must be set to developer mode. To learn how to do that, click the link below.</li>
     <li><a href="https://medium.com/sidequestvr/how-to-turn-on-developer-mode-for-the-quest-3-509244ccd386">Developer Mode Tutorial</a></li>
   </ul>
   <li>Side Quest Application to load APK to headset</li>
    <ul>
     <li><a href="https://sidequestvr.com/">Side Quest</a></li>
   </ul>
-  <li>Computer or Device to Connect Quest 3 to</li>
-  <li>A wire to connect to the quest 3 device</li>
+  <li>Computer or device to connect to the Quest 3</li>
+  <li>A wire (USB-C cable) to connect to the Quest 3 device</li>
 </ul>
-
-
-
 
 <h3>Steps for Installing program to Quest 3</h3>
 <p></p>
@@ -73,10 +72,7 @@
   <li>If the operation finishes without errors, then the application should be loaded to a file called unknown applications in the headset</li>
   <li>Look at your application library in the meta quest 3 and there should either be a tab called "Unknown Sources" or a dropdown menu that contains a section that is called unknown sources, this is where the application should be installed to</li>
   <li>Click on the application to launch it</li>
-  
-  
 </ol>
-
 
 
 
@@ -90,6 +86,7 @@
 </ul>
 
 
+
 <h2>📅 Development Timeline</h2>
 <ul style="list-style: none; padding-left: 0;">
   <li><strong> Fall 2024:</strong> Planning Phase – brainstorming, research, and design mockups.</li>
@@ -100,23 +97,28 @@
 <img width="866" alt="Screenshot" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
 
 
+
 <h1>Project Motivation</h1>
 
 <h2>✅ Our Problem Statement</h1>
 <p>
   A problem with introducing augmented reality (AR) technology to people is that the features of it are often new and hard to present in an intuitive manner.
 
-  One feature of augmented reality that we showcase is how interacting with a real physical objects affects virtual objects in a 3D environment, creating a more immersive experience than other fully virtual projects.
+  One feature of augmented reality that we showcase is how interacting with a real physical objects affect virtual objects in a 3D environment, creating a more immersive experience than other fully virtual projects.
 
-  In our project, AR is also contextualized by a familiar setting, Tetris. All these factors combined make for a engaging experience that gets the user more familiar with AR.
+  In our project, AR is also contextualized by a familiar setting - Tetris. All of these factors combined make for an engaging experience that helps the user become more familiar with AR technology.
 </p>
+
+
 
 <h2>🧑‍🧑‍🧒 Audience</h2>
 <p>
-  Our project aims to captivate people of all ages, reflecting the addictive nature of Tetris. As was stated in the problem statement, we wanted to focus on people with little or no experience using Augmented/Virtual Reality.
+  Our project aims to captivate people of all ages, reflecting the addictive and widespread nature of Tetris. As what was stated in our problem statement, we wanted to focus on people with little or no experience using Augmented/Virtual Reality.
 
   Given the fact that the main audience for Virtual Reality games are younger people, we wanted to focus on making the gameplay and controls intuitive so that players can pick up the game without looking at a tutorial.
 </p>
+
+
 
 <h2>⚙️ Core Features</h2>
 <li>Realistic piece physics</li>
@@ -124,6 +126,8 @@
 <li>Piece rotation and movement tracked with other controller</li>
 <li>Scoring mechanic based on color matching</li>
 <li>High score leaderboard to compete against others!</li>
+
+
 
 <h2>🔌 Implementation</h2>
 <li>Unity version 2022.3.52f1</li>

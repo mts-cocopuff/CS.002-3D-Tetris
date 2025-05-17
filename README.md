@@ -3,7 +3,7 @@
   3D Tetris Shuffle
 </h1>
 <h3 align="center">
-  A Senior Capstone project at Oregon State University
+  2024-2025 Senior Capstone project at Oregon State University
 
 </h3>
   

@@ -37,20 +37,23 @@
 
 <h2>👥 Meet the Team Members</h2>
 <ul>
+  <li><strong>Alex Giger</strong> – Team Captain, Developer</li>
+  <li><strong>Rebecca Klump</strong> - Game Design Lead, Developer</li>
   <li><strong>Sage Tafoya</strong> – XR Development Lead</li>
-  <li><strong>Kimberly Yeo</strong></li>
-  <li><strong>Rebecca Klump</strong></li>
-  <li><strong>Alex Giger</strong> – Developer, Team Captain</li>
+  <li><strong>Kimberly Yeo</strong> - Documentation Review, Developer</li>
   <li><strong>Mike Bailey</strong> – Project Partner</li>
 </ul>
 
 
 <h2>📅 Development Timeline</h2>
 <ul style="list-style: none; padding-left: 0;">
-  <li><strong> Fall 2024:</strong> Planning phase – brainstorming, research, and design mockups.</li>
-  <li><strong> Winter 2025:</strong> Implementation phase – core development and .</li>
-  <li><strong> Spring 2025:</strong> Finalization – polishing, bug fixes, product launch.</li>
+  <li><strong> Fall 2024:</strong> Planning Phase – brainstorming, research, and design mockups.</li>
+  <li><strong> Winter 2025:</strong> Implementation Phase – core development and design revision.</li>
+  <li><strong> Spring 2025:</strong> Finalization – polishing, bug fixes, and product launch.</li>
 </ul>
+
+<img width="866" alt="Screenshot" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
+
 
 <h1>Project Motivation</h1>
 

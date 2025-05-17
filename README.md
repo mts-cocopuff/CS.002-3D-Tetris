@@ -35,6 +35,49 @@
 
 <h1>❓ About</h1>
 
+<h2>⬇️Donwload and Install⬇️</h2>
+<p>In order to instal this appklication there are a few requirements you need</p> 
+such as a Meta Quest 3, Access to a device that you can connect to the quest 3 using a cord, </p>
+
+[⬇️ Download APK File](https://github.com/mts-cocopuff/CS.002-3D-Tetris/tree/main/BuiltAPKversions/TetrisShuffle1.0.apk)
+
+<h3>Requiremetns</h3>
+<p><p>
+<ul>
+  <li>Meta Quest 3 Headset</li>
+  <ul>
+    <li>The headset that you use must be set to developer mode, to learn how to do that click the link below</li>
+    <li><a href="https://medium.com/sidequestvr/how-to-turn-on-developer-mode-for-the-quest-3-509244ccd386">Developer Mode Tutorial</a></li>
+  </ul>
+  <li>Side Quest Appication to load APK to headseet</li>
+   <ul>
+    <li><a href="https://sidequestvr.com/">Side Quest</a></li>
+  </ul>
+  <li>Computer or Device to Connect Quest 3 to</li>
+  <li>A wire to connect to the quest 3 deveice</li>
+</ul>
+
+
+
+
+<h3>Steps for Installing program to Quest 3</h3>
+<p></p>
+<ol>
+  <li>Create a Meta Account if you do not have one or locate the one associated with your headset</li>
+  <li>Log into meta dashboard at <a href="https://developer.oculus.com/manage/organizations/149461441410610/">https://developer.oculus.com</a> and follow previously mentioned instructions for enabling developer mode</li>
+  <li>Set Quest 3 Headset to Developer Mode as described in listed manuals</li>
+  <li>Install  <a href="https://sidequestvr.com/">Side Quest</a> application to install .apk file to headset</li>
+  <li>Connect Meta Quest 3 to computer or device and allow debugging inside headset</li>
+  <li>Open Sidequest with headset connected and look for a green circle in the top left that indicates that a connection is esablished to the headset</li>
+  <li>In the icons in the top right corner of the appliaction, click the icon that looks like a box with a down arrow on it</li>
+  <li>Select the .apk file to upload to headset </li>
+  <li>If the operation finishes without errors, then the application should be loaded to a file called unknown applications in the headset</li>
+  <li>Look at your application libary in the meta quest 3 and there should either be a tab called "Unknown Sources" or a dropdown menu that contains a section that is called unknown sources, this is where the application should be installed to</li>
+  <li>Click on the appkication to launch it</li>
+  
+  
+</ol>
+
 <h2>👥 Meet the Team Members</h2>
 <ul>
   <li><strong>Alex Giger</strong> – Team Captain, Developer</li>

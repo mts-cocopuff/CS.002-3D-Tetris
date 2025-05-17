@@ -10,7 +10,7 @@ public class OpenScene : MonoBehaviour
 {
 
     public GameObject obj;
-    
+
     public void NextScene()
     {
         SceneManager.LoadScene("XRinCurrentModel");
@@ -45,6 +45,11 @@ public class OpenScene : MonoBehaviour
     public void GoToOptions()
     {
         SceneManager.LoadScene("OptionsMenu");
+    }
+    
+    public void GoToLeaderboard()
+    {
+        SceneManager.LoadScene("XREndScene");
     }
     
 }

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float timeRemaining = 120f;
+    public float timeRemaining;
     public TextMeshProUGUI timerText;
 
     private Color startColor = Color.white;
@@ -18,7 +18,7 @@ public class CountdownTimer : MonoBehaviour
 
     public void GoToLeaderboard()
     {
-        SceneManager.LoadScene("XREndScene");
+        SceneManager.LoadScene("XREnterName");
 
     }
 
@@ -33,6 +33,7 @@ public class CountdownTimer : MonoBehaviour
         {
             timeRemaining = 0;
             timerText.text = "Time's Up!";
+            SceneManager.LoadScene("XREnterName");
 
             //get the tmp text and make it an int
             int score = int.Parse(GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text);

@@ -7,7 +7,7 @@
   2024-2025 Senior Capstone project at Oregon State University
 </h3>
   
-<img width="866" alt="Screenshot 2025-05-16 at 5 18 23 PM" src="https://github.com/user-attachments/assets/325aa74f-9bae-43c4-94b2-020f80a33602" />
+<img width="866" alt="Screenshot1" src="https://github.com/user-attachments/assets/325aa74f-9bae-43c4-94b2-020f80a33602" />
 
 </div>
 <!-- Insert team photo -->
@@ -94,7 +94,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   <li><strong> Spring 2025:</strong> Finalization – polishing, bug fixes, and product launch.</li>
 </ul>
 
-<img width="866" alt="Screenshot" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
+<img width="866" alt="Screenshot2" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
 
 
 
@@ -123,7 +123,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <h2>⚙️ Core Features</h2>
 <li>Realistic physics</li>
 <li>Playing field rotation linked to one (left) controller</li>
-<li>Piece rotation and movement tracked with other (right) controller</li>
+<li>Piece rotation and movement tracked with other (right) controller using Unity physics</li>
 <li>Scoring mechanic based on color matching</li>
 <li>High score leaderboard for competing against others!</li>
 
@@ -131,7 +131,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 <h2>🔌 Implementation</h2>
 <li>Unity version 2022.3.52f1</li>
-<li>Uses Meta Quest 3 and OpenXR plugin</li>
-<li>Synchronizes rotation of controller with rotation of playing field</li>
-<li>Synchronizes controller movements using Unity physics</li>
+<li>Meta Quest 3 with OpenXR plugin</li>
 
+<h2>📐 Architecture</h2>
+<img width="866" alt="Screenshot3" src="https://github.com/user-attachments/assets/c152dae5-d839-43bf-81a4-bc8a4b74ce32" />

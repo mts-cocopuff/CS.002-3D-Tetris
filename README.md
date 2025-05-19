@@ -1,4 +1,5 @@
 <div align="center">
+  
 <h1>
   3D Tetris Shuffle
 </h1>
@@ -11,7 +12,7 @@
 
 </div>
 
-## 
+##
 
 <details padding=10px>
   <summary>Table of Contents</summary>
@@ -44,12 +45,13 @@
   </ul>
 </details>
 
-
+##
 
 <h1>❓ About</h1>
 
 <p>In order to install this application there are a few requirements you need
 such as a Meta Quest 3, access to a device that you can connect to the Quest 3 using a cord, and the Side Quest Application to install the .apk file to the headset. A separate computer or device is not necessary to run the application after the initial installation to the headset. Further details about the process are added below.</p>
+
 
 <h3>Download APK</h3>
 
@@ -72,6 +74,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   <li>A wire (USB-C cable) to connect to the Quest 3 device</li>
 </ul>
 
+
 <h3>Installing to Quest 3</h3>
 <p></p>
 <ol>
@@ -87,7 +90,6 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   <li>Look at your application library in the Meta Quest 3 and there should either be a tab called "Unknown Sources" or a dropdown menu that contains a section that is called unknown sources, this is where the application should be installed to</li>
   <li>Click on the application to launch it</li>
 </ol>
-
 
 
 <h2>👥 Meet the Team Members</h2>
@@ -117,7 +119,6 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <img width="866" alt="Screenshot2" src="https://github.com/user-attachments/assets/f2bdd379-d4a9-4cec-b65c-6593132392cf"/>
 
 
-
 <h2>📅 Development Timeline</h2>
 <ul style="list-style: none; padding-left: 0;">
   <li><strong> Fall 2024:</strong> Planning Phase – brainstorming, research, and design mockups.</li>
@@ -127,7 +128,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 <img width="866" alt="Screenshot3" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
 
-
+##
 
 <h1>Project Motivation</h1>
 
@@ -141,7 +142,6 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 </p>
 
 
-
 <h2>🧑 Audience</h2>
 <p>
   Our project aims to captivate people of all ages, reflecting the addictive and widespread nature of Tetris. As what was stated in our problem statement, we want to focus on people with little or no experience using augmented/virtual reality.
@@ -149,7 +149,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   Given the fact that the main audience for virtual reality games are younger people, we wanted to focus on making the gameplay and controls intuitive so that players can pick up the game without looking at a tutorial.
 </p>
 
-
+##
 
 <h1>Project Specifications</h1>
 
@@ -161,13 +161,13 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <li>High score leaderboard for competing against others!</li>
 
 
-
 <h2>🔌 Implementation</h2>
 <li>Unity version 2022.3.52f1</li>
 <li>Meta Quest 3 with OpenXR plugin</li>
 <li>Front-end dependencies: Meta XR SDK Plugin, Meta Depth API, TextMeshPro, QuickOutline</li>
 <li>Back-end dependencies: Android Build Support</li>
 <li>Written in C#</li>
+
 
 <h2>📐 Architecture</h2>
 <img width="866" alt="Screenshot4" src="https://github.com/user-attachments/assets/dc235080-88b2-4cd5-a2c3-8d8a6d7112ff" />

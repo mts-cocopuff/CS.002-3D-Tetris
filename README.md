@@ -15,7 +15,7 @@
 
 <details padding=10px>
   <summary>Table of Contents</summary>
-  <ol>
+  <ul>
     <li>
       <a>About</a>
       <ul>
@@ -41,7 +41,7 @@
         <li><a>Architecture</a></li>
       </ul>
     </li>
-  </ol>
+  </ul>
 </details>
 
 

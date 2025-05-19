@@ -58,7 +58,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   <li>A wire (USB-C cable) to connect to the Quest 3 device</li>
 </ul>
 
-<h3>Steps for Installing program to Quest 3</h3>
+<h3>Installing to Quest 3</h3>
 <p></p>
 <ol>
   <li>Create a Meta Account if you do not have one or locate the one associated with your headset</li>
@@ -79,10 +79,25 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <h2>👥 Meet the Team Members</h2>
 <ul>
   <li><strong>Alex Giger</strong> – Team Captain, Developer</li>
+  <ul>
+    <li>Contact: a13xgiger@gmail.com</li>
+  </ul>
   <li><strong>Rebecca Klump</strong> - Game Design Lead, Developer</li>
+  <ul>
+    <li>Contact: klumpy22@gmail.com</li>
+  </ul>
   <li><strong>Sage Tafoya</strong> – XR Development Lead</li>
+  <ul>
+    <li>Contact: tafoyasage@gmail.com</li>
+  </ul>
   <li><strong>Kimberly Yeo</strong> - Documentation Review, Developer</li>
+  <ul>
+    <li>Contact: kim252734@gmail.com</li>
+  </ul>
   <li><strong>Mike Bailey</strong> – Project Partner</li>
+  <ul>
+    <li>Website: web.engr.oregonstate.edu/~mjb</li>
+  </ul>
 </ul>
 
 
@@ -111,7 +126,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 
 
-<h2>🧑‍🧑‍🧒 Audience</h2>
+<h2>🧑 Audience</h2>
 <p>
   Our project aims to captivate people of all ages, reflecting the addictive and widespread nature of Tetris. As what was stated in our problem statement, we want to focus on people with little or no experience using augmented/virtual reality.
 

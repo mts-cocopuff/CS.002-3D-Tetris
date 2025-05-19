@@ -17,18 +17,29 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a>About The Project</a>
+      <a>About</a>
       <ul>
-        <li><a>Team Members</a></li>
+        <li><a>Requirements</a></li>
+        <li><a>Installing to Quest 3</a></li>
+        <li><a>Meet the Team Members</a></li>
         <li><a>Development Timeline</a></li>
       </ul>
     </li>
     <li>
       <a>Project Motivation</a>
+      <ul>
+        <li><a>Our Problem Statement</a></li>
+        <li><a>Audience</a></li>
+      </ul>
     </li>
-    <li><a>Development and Technology Used</a></li>
-    <li><a>Installation and Dependencies</a></li>
-    <li><a>Contact</a></li>
+    <li>
+      <a>Project Specifications</a>
+      <ul>
+        <li><a>Core Features</a></li>
+        <li><a>Implementation</a></li>
+        <li><a>Architecture</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 

@@ -12,6 +12,10 @@ public class Spawner : MonoBehaviour
     private float timeSinceLastSpawn;
     private float lastSpawnTime = -1f;
 
+    public float spawnWaitTime = 10f; // time to wait before spawning a new piece
+    public float timeSinceStartWait = 0f;
+   
+
     public RotateSnapSphere rotsphere = null;
 
     public GameObject pieceTemplate;
@@ -56,6 +60,17 @@ public class Spawner : MonoBehaviour
         });
 
         CenterCubeCoords();
+        bool waiting = true;
+        // Sage Tried adding a timer to see if it would allow the pieces to load and prevent double spawning
+        // // Spawn the first piece
+        // while(waiting)
+        // {
+        //     timeSinceStartWait += Time.deltaTime;
+        //     if (timeSinceStartWait >= spawnWaitTime)
+        //     {
+        //         waiting = false;
+        //     }
+        // }
 
         SpawnRandomPiece();
     }

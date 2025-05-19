@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
 using TMPro;
-
+using debug = UnityEngine.Debug;
 public class Gravity : MonoBehaviour
 {
     public GameObject BaseObject;
     private bool isColliding = false;
     Turntable turntableScript;
+
+    float slamspeed = 5f;
 
     // private InputDevice LeftInputController;
 
@@ -41,7 +43,33 @@ public class Gravity : MonoBehaviour
         // While rigidbody is not colliding with anything, move down
         if (!isColliding)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
+            UnityEngine.XR.InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+
+            //get trigger value from right controller if possible, or set trigger value to 0 to avoid slam effects
+
+            float triggerValue = 0f;
+
+            if (rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.trigger, out triggerValue))
+            {
+                if (triggerValue > 0.1f)
+                {
+                    transform.Translate(Vector3.down * (speed + (slamspeed * triggerValue)) * Time.deltaTime, Space.World);
+                }
+                else
+                {
+                    transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
+
+                }
+                
+            }
+            else
+            {
+                transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
+            }
+
+            // if (triggerValue > 0.1f) debug.Log("slampiece: " + triggerValue); // if the trigger is pressed, print the value
+
+            // transform.Translate(Vector3.down * (speed +(slamspeed*triggerValue)) * Time.deltaTime, Space.World);
 
             float nudgespeed = 6f;
             float inout = 0f;
@@ -69,6 +97,13 @@ public class Gravity : MonoBehaviour
                 Vector3.right * sideside * nudgespeed * Time.deltaTime
                 + Vector3.forward * inout * nudgespeed * Time.deltaTime, Space.World
             );
+
+            
+            if (rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceRotation, out Quaternion controllerRotation))
+            {
+                transform.rotation = controllerRotation* Quaternion.Euler(30, 30, 30);
+            }
+
         }
         else{
 

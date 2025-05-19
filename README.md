@@ -38,7 +38,7 @@
 <h1>❓ About</h1>
 
 <p>In order to install this application there are a few requirements you need
-such as a Meta Quest 3, Access to a device that you can connect to the quest 3 using a cord, and the Side Quest Application to install the .apk file to the headset. Further details about the process are added below </p>
+such as a Meta Quest 3, access to a device that you can connect to the Quest 3 using a cord, and the Side Quest Application to install the .apk file to the headset. Further details about the process are added below.</p>
 
 [⬇️ Download APK File](https://github.com/mts-cocopuff/CS.002-3D-Tetris/tree/main/BuiltAPKversions/TetrisShuffle1.0.apk)
 
@@ -62,15 +62,15 @@ such as a Meta Quest 3, Access to a device that you can connect to the quest 3 u
 <p></p>
 <ol>
   <li>Create a Meta Account if you do not have one or locate the one associated with your headset</li>
-  <li>Log into meta dashboard at <a href="https://developer.oculus.com/manage/organizations/149461441410610/">https://developer.oculus.com</a> and follow previously mentioned instructions for enabling developer mode</li>
-  <li>Set Quest 3 Headset to Developer Mode as described in listed manuals</li>
+  <li>Log into Meta Dashboard at <a href="https://developer.oculus.com/manage/organizations/149461441410610/">https://developer.oculus.com</a> and follow previously mentioned instructions for enabling developer mode</li>
+  <li>Set Quest 3 headset to Developer Mode as described in listed manuals</li>
   <li>Install  <a href="https://sidequestvr.com/">Side Quest</a> application to install .apk file to headset</li>
-  <li>Connect Meta Quest 3 to computer or device and allow debugging inside headset</li>
-  <li>Open Side Quest with headset connected and look for a green circle in the top left that indicates that a connection is established to the headset</li>
+  <li>Connect the Meta Quest 3 to a computer or device and allow debugging inside headset</li>
+  <li>Open Side Quest with the headset connected and look for a green circle in the top left that indicates that a connection is established to the headset</li>
   <li>In the icons in the top right corner of the application, click the icon that looks like a box with a down arrow on it</li>
-  <li>Select the .apk file to upload to headset </li>
-  <li>If the operation finishes without errors, then the application should be loaded to a file called unknown applications in the headset</li>
-  <li>Look at your application library in the meta quest 3 and there should either be a tab called "Unknown Sources" or a dropdown menu that contains a section that is called unknown sources, this is where the application should be installed to</li>
+  <li>Select the .apk file to upload to headset</li>
+  <li>If the operation finishes without errors, then the application should be loaded to a file called "unknown application" in the headset</li>
+  <li>Look at your application library in the Meta Quest 3 and there should either be a tab called "Unknown Sources" or a dropdown menu that contains a section that is called unknown sources, this is where the application should be installed to</li>
   <li>Click on the application to launch it</li>
 </ol>
 
@@ -104,7 +104,7 @@ such as a Meta Quest 3, Access to a device that you can connect to the quest 3 u
 <p>
   A problem with introducing augmented reality (AR) technology to people is that the features of it are often new and hard to present in an intuitive manner.
 
-  One feature of augmented reality that we showcase is how interacting with a real physical objects affect virtual objects in a 3D environment, creating a more immersive experience than other fully virtual projects.
+  One feature of augmented reality that we showcase is how interacting with real physical objects affect virtual objects in a 3D environment, creating a more immersive experience than other fully virtual projects.
 
   In our project, AR is also contextualized by a familiar setting - Tetris. All of these factors combined make for an engaging experience that helps the user become more familiar with AR technology.
 </p>
@@ -113,25 +113,25 @@ such as a Meta Quest 3, Access to a device that you can connect to the quest 3 u
 
 <h2>🧑‍🧑‍🧒 Audience</h2>
 <p>
-  Our project aims to captivate people of all ages, reflecting the addictive and widespread nature of Tetris. As what was stated in our problem statement, we wanted to focus on people with little or no experience using Augmented/Virtual Reality.
+  Our project aims to captivate people of all ages, reflecting the addictive and widespread nature of Tetris. As what was stated in our problem statement, we want to focus on people with little or no experience using augmented/virtual reality.
 
-  Given the fact that the main audience for Virtual Reality games are younger people, we wanted to focus on making the gameplay and controls intuitive so that players can pick up the game without looking at a tutorial.
+  Given the fact that the main audience for virtual reality games are younger people, we wanted to focus on making the gameplay and controls intuitive so that players can pick up the game without looking at a tutorial.
 </p>
 
 
 
 <h2>⚙️ Core Features</h2>
-<li>Realistic piece physics</li>
-<li>Playing field rotation linked to one controller</li>
-<li>Piece rotation and movement tracked with other controller</li>
+<li>Realistic physics</li>
+<li>Playing field rotation linked to one (left) controller</li>
+<li>Piece rotation and movement tracked with other (right) controller</li>
 <li>Scoring mechanic based on color matching</li>
-<li>High score leaderboard to compete against others!</li>
+<li>High score leaderboard for competing against others!</li>
 
 
 
 <h2>🔌 Implementation</h2>
 <li>Unity version 2022.3.52f1</li>
 <li>Uses Meta Quest 3 and OpenXR plugin</li>
-<li>Synchronizes rotation of controller and rotation of game board</li>
-<li>Has to sync up controller movements with Unity physics</li>
+<li>Synchronizes rotation of controller with rotation of playing field</li>
+<li>Synchronizes controller movements using Unity physics</li>
 

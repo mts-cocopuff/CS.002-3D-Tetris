@@ -52,6 +52,8 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 [⬇️ Download APK File](https://github.com/mts-cocopuff/CS.002-3D-Tetris/tree/main/BuiltAPKversions/TetrisShuffle1.0.apk)
 
+[![Download](https://img.shields.io/github/v/release/mts-cocopuff/CS.002-3D-Tetris?style=for-the-badge)](https://github.com/mts-cocopuff/CS.002-3D-Tetris/releases/latest)
+
 <h3>Requirements</h3>
 <p><p>
 <ul>

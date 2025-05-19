@@ -94,23 +94,23 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <ul>
   <li><strong>Sage Tafoya</strong> – XR Development Lead</li>
   <ul>
-    <li>Contact: tafoyasage@gmail.com</li>
+    <li>Contact: <a href="mailto:tafoyasage@gmail.com">tafoyasage@gmail.com</a></li>
   </ul>
   <li><strong>Rebecca Klump</strong> - Game Design Lead, Developer</li>
   <ul>
-    <li>Contact: klumpy22@gmail.com</li>
+    <li>Contact: <a href="mailto:klumpy22@gmail.com">klumpy22@gmail.com</a></li>
   </ul>
   <li><strong>Kimberly Yeo</strong> - Documentation Review, Developer</li>
   <ul>
-    <li>Contact: kim252734@gmail.com</li>
+    <li>Contact: <a href="mailto:kim252734@gmail.com">kim252734@gmail.com</a></li>
   </ul>
   <li><strong>Alex Giger</strong> – Team Captain, Developer</li>
   <ul>
-    <li>Contact: a13xgiger@gmail.com</li>
+    <li>Contact: <a href="mailto:a13xgiger@gmail.com">a13xgiger@gmail.com</a></li>
   </ul>
   <li><strong>Mike Bailey</strong> – Project Partner</li>
   <ul>
-    <li>Website: web.engr.oregonstate.edu/~mjb</li>
+    <li>Website: <a href="https://web.engr.oregonstate.edu/~mjb">web.engr.oregonstate.edu/~mjb</a></li>
   </ul>
 </ul>
 

@@ -50,11 +50,8 @@
 <p>In order to install this application there are a few requirements you need
 such as a Meta Quest 3, access to a device that you can connect to the Quest 3 using a cord, and the Side Quest Application to install the .apk file to the headset. A separate computer or device is not necessary to run the application after the initial installation to the headset. Further details about the process are added below.</p>
 
-#[⬇️ Download APK File](https://github.com/mts-cocopuff/CS.002-3D-Tetris/tree/main/BuiltAPKversions/TetrisShuffle1.0.apk)
+[![Download](https://img.shields.io/github/v/release/mts-cocopuff/CS.002-3D-Tetris?style=for-the-badge)](https://github.com/mts-cocopuff/CS.002-3D-Tetris/releases/latest)
 
-#[![Download](https://img.shields.io/github/v/release/mts-cocopuff/CS.002-3D-Tetris?style=for-the-badge)](https://github.com/mts-cocopuff/CS.002-3D-Tetris/releases/latest)
-
-[Download Pre-release](https://github.com/mts-cocopuff/CS.002-3D-Tetris/releases/download/v0.0.2/TetrisShuffle1.0.apk)
 
 <h3>Requirements</h3>
 <p><p>

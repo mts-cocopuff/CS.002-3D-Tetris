@@ -99,7 +99,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   </ul>
 </ul>
 
-<img width="866" alt="Screenshot4" src="https://github.com/user-attachments/assets/f2bdd379-d4a9-4cec-b65c-6593132392cf"/>
+<img width="866" alt="Screenshot2" src="https://github.com/user-attachments/assets/f2bdd379-d4a9-4cec-b65c-6593132392cf"/>
 
 
 
@@ -110,7 +110,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
   <li><strong> Spring 2025:</strong> Finalization – polishing, bug fixes, and product launch.</li>
 </ul>
 
-<img width="866" alt="Screenshot2" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
+<img width="866" alt="Screenshot3" src="https://github.com/user-attachments/assets/f33954bb-6810-4ca1-9f10-e7a11ee2b032" />
 
 
 
@@ -153,4 +153,4 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <li>Written in C#</li>
 
 <h2>📐 Architecture</h2>
-<img width="866" alt="Screenshot3" src="https://github.com/user-attachments/assets/c152dae5-d839-43bf-81a4-bc8a4b74ce32" />
+<img width="866" alt="Screenshot4" src="https://github.com/user-attachments/assets/dc235080-88b2-4cd5-a2c3-8d8a6d7112ff" />

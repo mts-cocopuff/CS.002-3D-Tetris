@@ -10,7 +10,6 @@
 <img width="866" alt="Screenshot1" src="https://github.com/user-attachments/assets/325aa74f-9bae-43c4-94b2-020f80a33602" />
 
 </div>
-<!-- Insert team photo -->
 
 ## 
 
@@ -78,27 +77,29 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 <h2>👥 Meet the Team Members</h2>
 <ul>
-  <li><strong>Alex Giger</strong> – Team Captain, Developer</li>
+  <li><strong>Sage Tafoya</strong> – XR Development Lead</li>
   <ul>
-    <li>Contact: a13xgiger@gmail.com</li>
+    <li>Contact: tafoyasage@gmail.com</li>
   </ul>
   <li><strong>Rebecca Klump</strong> - Game Design Lead, Developer</li>
   <ul>
     <li>Contact: klumpy22@gmail.com</li>
   </ul>
-  <li><strong>Sage Tafoya</strong> – XR Development Lead</li>
-  <ul>
-    <li>Contact: tafoyasage@gmail.com</li>
-  </ul>
   <li><strong>Kimberly Yeo</strong> - Documentation Review, Developer</li>
   <ul>
     <li>Contact: kim252734@gmail.com</li>
+  </ul>
+  <li><strong>Alex Giger</strong> – Team Captain, Developer</li>
+  <ul>
+    <li>Contact: a13xgiger@gmail.com</li>
   </ul>
   <li><strong>Mike Bailey</strong> – Project Partner</li>
   <ul>
     <li>Website: web.engr.oregonstate.edu/~mjb</li>
   </ul>
 </ul>
+
+<img width="866" alt="Screenshot4" src="https://github.com/user-attachments/assets/f2bdd379-d4a9-4cec-b65c-6593132392cf"/>
 
 
 
@@ -147,6 +148,9 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 <h2>🔌 Implementation</h2>
 <li>Unity version 2022.3.52f1</li>
 <li>Meta Quest 3 with OpenXR plugin</li>
+<li>Front-end dependencies: Meta XR SDK Plugin, Meta Depth API, TextMeshPro, QuickOutline</li>
+<li>Back-end dependencies: Android Build Support</li>
+<li>Written in C#</li>
 
 <h2>📐 Architecture</h2>
 <img width="866" alt="Screenshot3" src="https://github.com/user-attachments/assets/c152dae5-d839-43bf-81a4-bc8a4b74ce32" />

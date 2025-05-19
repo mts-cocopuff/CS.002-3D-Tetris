@@ -30,7 +30,7 @@
     <li>
       <a>Project Motivation</a>
       <ul>
-        <li><a>Our Problem Statement</a></li>
+        <li><a>Problem Statement</a></li>
         <li><a>Audience</a></li>
       </ul>
     </li>
@@ -132,7 +132,7 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 <h1>Project Motivation</h1>
 
-<h2>✅ Our Problem Statement</h1>
+<h2>✅ Problem Statement</h1>
 <p>
   A problem with introducing augmented reality (AR) technology to people is that the features of it are often new and hard to present in an intuitive manner.
 

@@ -136,6 +136,8 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 
 
+<h1>Project Specifications</h1>
+
 <h2>⚙️ Core Features</h2>
 <li>Realistic physics</li>
 <li>Playing field rotation linked to one (left) controller</li>

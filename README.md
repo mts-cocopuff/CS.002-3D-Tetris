@@ -5,7 +5,7 @@
 </h1>
   
 <h3 align="center">
-  2024-2025 Senior Capstone project at Oregon State University
+  2024-2025 Senior Capstone Project (CS.002) at Oregon State University
 </h3>
   
 <img width="866" alt="Screenshot1" src="https://github.com/user-attachments/assets/325aa74f-9bae-43c4-94b2-020f80a33602" />

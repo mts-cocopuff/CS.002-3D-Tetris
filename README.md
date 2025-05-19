@@ -171,3 +171,4 @@ such as a Meta Quest 3, access to a device that you can connect to the Quest 3 u
 
 <h2>📐 Architecture</h2>
 <img width="866" alt="Screenshot4" src="https://github.com/user-attachments/assets/dc235080-88b2-4cd5-a2c3-8d8a6d7112ff" />
+

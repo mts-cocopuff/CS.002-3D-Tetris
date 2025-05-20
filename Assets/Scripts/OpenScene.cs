@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class OpenScene : MonoBehaviour
 {
 
+    public NameSelect nameScript;
     public GameObject obj;
 
     public void NextScene()
@@ -49,6 +50,12 @@ public class OpenScene : MonoBehaviour
     
     public void GoToLeaderboard()
     {
+        string playerName = ((char)nameScript.N1).ToString() +
+        ((char)nameScript.N2).ToString() + 
+        ((char)nameScript.N3).ToString();
+
+        PlayerPrefs.SetString("PlayerName", playerName);
+        
         SceneManager.LoadScene("XREndScene");
     }
     

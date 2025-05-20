@@ -91,10 +91,10 @@ public class Leaderboard : MonoBehaviour
         {
             // Instantiate a new TMP prefab for each score
             // set text position to be 300, 0, 0
-            scorePrefab.GetComponent<TextMeshProUGUI>().fontSize = 20;
+            scorePrefab.GetComponent<TextMeshProUGUI>().fontSize = 50;
             scorePrefab = Instantiate(scorePrefab, transform);
             RectTransform rt = scorePrefab.GetComponent<RectTransform>();
-            rt.anchoredPosition = new Vector2(475, 300 -(i * 30)); // Adjust the Y position based on the index
+            rt.anchoredPosition = new Vector2(700, 300 -(i * 70)); // Adjust the Y position based on the index
             //set text to be 'score: ' + highScores[i].score + ' name: ' + highScores[i].name
             scorePrefab.GetComponent<TextMeshProUGUI>().text = (i + 1) + ". " + highScores[i].score + " -- " + highScores[i].name;
         }

@@ -62,6 +62,10 @@ public class OpenScene : MonoBehaviour
 
         // SceneManager.LoadScene("XREndScene");
 
+        if(playerName == "!")
+        {
+            return;
+        }
 
         PlayerPrefs.SetString("PlayerName", playerName);
 

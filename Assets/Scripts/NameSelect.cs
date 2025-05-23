@@ -15,6 +15,8 @@ public class NameSelect : MonoBehaviour
     public TextMeshProUGUI Letter2;
     public TextMeshProUGUI Letter3;
 
+    string[] bannedWords = { "ASS", "SEX", "FAG", "CUM", "TIT", "DIE", "JIZ", "NIG", "FCK", "WTF", "KKK", "KIL", "PIS", "FUC", "FUK", "AZZ"};
+
 
     //initalize the letters to A
     void Start()
@@ -96,7 +98,21 @@ public class NameSelect : MonoBehaviour
     public string GetPlayerName()
     {
         string playerName = ((char)N1).ToString() + ((char)N2).ToString() + ((char)N3).ToString();
+
+        for(int i =0; i< bannedWords.Length; i++)
+        {
+            if(bannedWords[i] == playerName)
+            {
+                N1 = 66;
+                N2 = 65;
+                N3 = 68;
+                return "!";
+            }
+        }
+
         return playerName;
+
+   
     }
 
 

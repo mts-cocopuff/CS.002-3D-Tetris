@@ -27,6 +27,7 @@ public class Leaderboard : MonoBehaviour
         int endScore = PlayerPrefs.GetInt("tempscore", 0);
         string playerName = PlayerPrefs.GetString("PlayerName", "");
         Debug.Log("Player Name: " + playerName);
+        Debug.Log("End Score: " + endScore);
         AddNewScore(new ScoreEntry(endScore, playerName));
         List<ScoreEntry> topScores = LoadHighScores();
         DisplayHighScores();

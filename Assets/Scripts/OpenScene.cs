@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //take speed variable from Gravity.cs and put it in here
-
+using debug = UnityEngine.Debug;
 
 public class OpenScene : MonoBehaviour
 {
@@ -65,10 +65,10 @@ public class OpenScene : MonoBehaviour
 
         PlayerPrefs.SetString("PlayerName", playerName);
 
-        SceneManager.LoadScene("XREndScene");
 
-        // debug.Log("Player Name: " + playerName);
+        debug.Log("Player Name: " + playerName);
         
+        SceneManager.LoadScene("XREndScene");
    
 
     }

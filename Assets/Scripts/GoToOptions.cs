@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GoToOptions : MonoBehaviour
 {
-    public void GoOptions()
+    public void GoToLeaderboard()
     {
-        SceneManager.LoadScene("OptionsMenu");
+        PlayerPrefs.SetInt("tempscore", 0);
+        PlayerPrefs.SetString("PlayerName", "");
+        SceneManager.LoadScene("XREndScene");
     }
 
 

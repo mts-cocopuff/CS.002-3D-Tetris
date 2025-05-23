@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 //take speed variable from Gravity.cs and put it in here
-
+using debug = UnityEngine.Debug;
 
 public class OpenScene : MonoBehaviour
 {
-
+    //name select object
+    public GameObject namsel;
+    public NameSelect nameScript;
     public GameObject obj;
 
     public void NextScene()
@@ -49,7 +50,31 @@ public class OpenScene : MonoBehaviour
     
     public void GoToLeaderboard()
     {
+        // SceneManager.LoadScene("XREndScene");
+
+
+        // string playerName = ((char)nameScript.N1).ToString() +
+        // ((char)nameScript.N2).ToString() + 
+        // ((char)nameScript.N3).ToString();
+
+        string playerName = namsel.GetComponent<NameSelect>().GetPlayerName();
+        // nameScript.GetPlayerName();
+
+        // SceneManager.LoadScene("XREndScene");
+
+        if(playerName == "!")
+        {
+            return;
+        }
+
+        PlayerPrefs.SetString("PlayerName", playerName);
+
+
+        debug.Log("Player Name: " + playerName);
+        
         SceneManager.LoadScene("XREndScene");
+   
+
     }
     
 }

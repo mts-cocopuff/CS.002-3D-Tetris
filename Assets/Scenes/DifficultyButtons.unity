@@ -1302,6 +1302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76c6bcb5ac6e034b8617fad9ee08890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namsel: {fileID: 0}
+  nameScript: {fileID: 0}
   obj: {fileID: 1585483790439519461, guid: dac4ce58b5dd04ced8b0a0b48c014fee, type: 3}
 --- !u!4 &99373940
 Transform:
@@ -1641,7 +1643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718644151602245690, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.54
+      value: 4.67
       objectReference: {fileID: 0}
     - target: {fileID: 4718644151602245690, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5532,7 +5534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc5c234723e3a54d8dd09b131117743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshType: 5
+  _meshType: 1
 --- !u!114 &491418592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5563,7 +5565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2609c54f376cffc4da1ab9401cc1a36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skeletonType: 5
+  _skeletonType: 1
   _updateRootPose: 0
   _updateRootScale: 1
   _enablePhysicsCapsules: 0
@@ -7273,7 +7275,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.8207547, g: 0.5536223, b: 0.74428153, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -12797,17 +12799,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081093330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.567}
+  m_LocalRotation: {x: -0.000017289816, y: 0.0025946414, z: -0.013433713, w: 0.9999064}
+  m_LocalPosition: {x: 0, y: 0, z: 4.468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1604666846}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.002, y: 0.297, z: -1.539}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.11}
+  m_AnchoredPosition: {x: -0.11, y: 1.11}
   m_SizeDelta: {x: 770, y: 483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1086251146
@@ -14310,7 +14312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1350042359079216569, guid: 24fe7a2bb5ed34959a44f4561824f4a3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.634
+      value: -0.131
       objectReference: {fileID: 0}
     - target: {fileID: 1350042359079216569, guid: 24fe7a2bb5ed34959a44f4561824f4a3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15469,7 +15471,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305381438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.927}
+  m_LocalPosition: {x: 0, y: 0, z: 3.692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15666,7 +15668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc5c234723e3a54d8dd09b131117743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshType: 4
+  _meshType: 0
 --- !u!114 &1316536009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15697,7 +15699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2609c54f376cffc4da1ab9401cc1a36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skeletonType: 4
+  _skeletonType: 0
   _updateRootPose: 0
   _updateRootScale: 1
   _enablePhysicsCapsules: 0
@@ -25587,7 +25589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718644151602245690, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.404
+      value: -1.286
       objectReference: {fileID: 0}
     - target: {fileID: 4718644151602245690, guid: e387a18df81a842ab94154d7e3bd05c9, type: 3}
       propertyPath: m_LocalRotation.w

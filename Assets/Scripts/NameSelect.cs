@@ -9,19 +9,21 @@ public class NameSelect : MonoBehaviour
     // Start is called before the first frame update
 
     //numeber values corralating to the value of the ascii of the name
-    public int N1=65, N2=65, N3=65;
+    public int N1 = 65, N2 = 65, N3 = 65;
 
     public TextMeshProUGUI Letter1;
     public TextMeshProUGUI Letter2;
     public TextMeshProUGUI Letter3;
 
+    string[] bannedWords = { "ASS", "SEX", "FAG", "CUM", "TIT", "DIE", "JIZ", "NIG", "FCK", "WTF", "KKK", "KIL", "PIS", "FUC", "FUK", "AZZ"};
+
 
     //initalize the letters to A
     void Start()
     {
-        
+
         Letter1.text = ((char)65).ToString();
-        Letter2.text = ((char)65).ToString();  
+        Letter2.text = ((char)65).ToString();
         Letter3.text = ((char)65).ToString();
 
     }
@@ -30,7 +32,7 @@ public class NameSelect : MonoBehaviour
     void Update()
     {
         Letter1.text = ((char)N1).ToString();
-        Letter2.text = ((char)N2).ToString();  
+        Letter2.text = ((char)N2).ToString();
         Letter3.text = ((char)N3).ToString();
 
         //update button 2
@@ -56,7 +58,7 @@ public class NameSelect : MonoBehaviour
             N1 = 90;
         }
     }
-    
+
     public void increaseN2()
     {
         N2++;
@@ -91,6 +93,26 @@ public class NameSelect : MonoBehaviour
         {
             N3 = 90;
         }
+    }
+    
+    public string GetPlayerName()
+    {
+        string playerName = ((char)N1).ToString() + ((char)N2).ToString() + ((char)N3).ToString();
+
+        for(int i =0; i< bannedWords.Length; i++)
+        {
+            if(bannedWords[i] == playerName)
+            {
+                N1 = 66;
+                N2 = 65;
+                N3 = 68;
+                return "!";
+            }
+        }
+
+        return playerName;
+
+   
     }
 
 

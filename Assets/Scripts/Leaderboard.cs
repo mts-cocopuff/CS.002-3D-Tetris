@@ -27,6 +27,7 @@ public class Leaderboard : MonoBehaviour
         int endScore = PlayerPrefs.GetInt("tempscore", 0);
         string playerName = PlayerPrefs.GetString("PlayerName", "");
         Debug.Log("Player Name: " + playerName);
+        Debug.Log("End Score: " + endScore);
         AddNewScore(new ScoreEntry(endScore, playerName));
         List<ScoreEntry> topScores = LoadHighScores();
         DisplayHighScores();
@@ -91,10 +92,10 @@ public class Leaderboard : MonoBehaviour
         {
             // Instantiate a new TMP prefab for each score
             // set text position to be 300, 0, 0
-            scorePrefab.GetComponent<TextMeshProUGUI>().fontSize = 20;
+            scorePrefab.GetComponent<TextMeshProUGUI>().fontSize = 50;
             scorePrefab = Instantiate(scorePrefab, transform);
             RectTransform rt = scorePrefab.GetComponent<RectTransform>();
-            rt.anchoredPosition = new Vector2(475, 300 -(i * 30)); // Adjust the Y position based on the index
+            rt.anchoredPosition = new Vector2(700, 300 -(i * 70)); // Adjust the Y position based on the index
             //set text to be 'score: ' + highScores[i].score + ' name: ' + highScores[i].name
             scorePrefab.GetComponent<TextMeshProUGUI>().text = (i + 1) + ". " + highScores[i].score + " -- " + highScores[i].name;
         }

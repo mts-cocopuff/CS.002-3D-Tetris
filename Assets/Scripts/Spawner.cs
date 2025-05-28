@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     public float timeSinceStartWait = 0f;
    
 
-    public RotateSnapSphere rotsphere = null;
+    //public RotateSnapSphere rotsphere = null;
 
     public GameObject pieceTemplate;
     public GameObject cubeTemplate;
@@ -145,6 +145,6 @@ public class Spawner : MonoBehaviour
         newPiece.transform.localScale = new Vector3(pieceScale, pieceScale, pieceScale);
 
         lastSpawnTime = Time.time;
-        rotsphere.ResetRotation();
+        //rotsphere.ResetRotation();
     }
 }

@@ -68,13 +68,34 @@ public class TetrisPiece : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        bool drop = false;
+
         if (other.gameObject.CompareTag("base") || other.gameObject.CompareTag("piece"))
+        {
+            drop = true;
+        }
+        else if (other.gameObject.CompareTag("wall"))
+        {
+            var contacts = new List<ContactPoint>();
+            other.GetContacts(contacts);
+            foreach (var contact in contacts)
+            {
+                if (contact.normal.y > 0.9)
+                {
+                    drop = true;
+                    break;
+                }
+            }
+        }
+
+        if (drop)
         {
             if (!setPiece){
                 setPiece = true;
                 spawner.SpawnRandomPiece();
                 transform.SetParent(baseContainer, true);
                 RemoveOutline();
+                GetComponent<Gravity>().Drop();
             }
         }
 

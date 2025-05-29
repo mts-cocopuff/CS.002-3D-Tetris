@@ -21,13 +21,10 @@ public class Gravity : MonoBehaviour
         UnityEngine.XR.InputDevice leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void Drop()
     {
-        if (collision.gameObject.CompareTag("base") || collision.gameObject.CompareTag("piece"))
-        {
-            GetComponent<Rigidbody>().useGravity = true;
-            isColliding = true;
-        }
+        GetComponent<Rigidbody>().useGravity = true;
+        isColliding = true;
     }
 
     public float speed;
